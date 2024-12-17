@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 26px 0;
+}
+.logo__first-half {
+    color: var(--light-green);
+}
+.logo__second-half {
+    color: var(--dark-green);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 32px;
+}
+.menu span {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+.menu span:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.menu .login {
+    border: 1px solid #3f3f3f;
+    line-height: 1;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+.login:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px #3f3f3f98;
+}
+.login button {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
