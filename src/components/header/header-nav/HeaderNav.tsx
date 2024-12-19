@@ -1,15 +1,13 @@
 import { JSX } from 'react';
-// import LoginButton from '../../buttons/LoginButton';
+import { Logo } from './../../logo/Logo';
+import LoginButton from './../../buttons/LoginButton';
 import './headerNav.css';
 
 export const HeaderNav = (): JSX.Element => {
   return (
     <div className="container">
       <div className="navbar">
-        <div className="logo no-select">
-          <label className="logo__first-half">Unwind</label>
-          <label className="logo__second-half">Cabins</label>
-        </div>
+        <Logo/>
         <div className="menu">
           <a href="/" className="menu-link">
             <span>Our cabins</span>
@@ -24,7 +22,7 @@ export const HeaderNav = (): JSX.Element => {
             <span>About us</span>
           </a>
           <div className="login">
-            {/* <LoginButton /> */}
+            <LoginButton />
           </div>
         </div>
       </div>
