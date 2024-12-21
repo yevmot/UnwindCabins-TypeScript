@@ -1,0 +1,28 @@
+/* @import url("./location/style.css");
+@import url("./datepicker/style.css");
+@import url("./travellers/style.css");
+@import url("./button/style.css"); */
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    width: 1041px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    padding: 0 27px;
+}
+.form-container {
+    position: absolute;
+    bottom: -60px;
+    z-index: 2;
+}
+.form input,
+.travellers,
+.button {
+    background-color: #eaeaea;
+    border-radius: 4px;
+    color: #565656;
+}

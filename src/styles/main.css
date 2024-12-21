@@ -25,7 +25,7 @@ main {
     height: auto;
 }
 .container {
-    width: 1044px;
+    max-width: 1044px;
     margin: 0 auto;
 }
 .no-select {
@@ -55,10 +55,15 @@ main {
 .title {
     max-width: 475px;
     font-family: "Source Serif 4";
-    font-size: 44px;
+    font-size: calc(15px + 29 * (100vw / 1561));
     font-weight: 700;
     line-height: 1.1;
     margin: 8px 0;
+}
+@media (max-width: 767px) {
+    .title {
+        font-size: calc(15px + (29 + 29 * 0.7) * ((100vw - 320px) / 1561));
+    }
 }
 p {
     font-family: Poppins;
