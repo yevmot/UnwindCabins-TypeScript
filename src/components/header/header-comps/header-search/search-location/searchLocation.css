@@ -1,0 +1,10 @@
+.TextField {
+    width: 296px;
+    height: 54px;
+}
+.MuiOutlinedInput-root fieldset {
+    border: none
+}
+.search-location span {
+    color: #565656;
+}

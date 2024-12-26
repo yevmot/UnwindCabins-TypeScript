@@ -1,0 +1,10 @@
+/* HEADER */
+@media (max-width: 767px) {
+    .header-text {
+        margin: 5px 0;
+        font-size: calc(8px + (8 + 8 * 0.7) * ((100vw - 320px)/ 1561));
+    }
+    .header-reviews {
+        display: none !important;
+    }
+}
