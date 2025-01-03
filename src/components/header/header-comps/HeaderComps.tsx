@@ -11,7 +11,7 @@ export const HeaderComps = (): JSX.Element => {
       <div className="header-container">
         <HeaderBg />
         <HeaderContent />
-        <HeaderSearch />
+        {/* <HeaderSearch /> */}
       </div>
     </div>
   );

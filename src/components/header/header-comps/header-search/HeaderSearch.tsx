@@ -14,10 +14,10 @@ export const HeaderSearch = (): JSX.Element => {
       <div className="form-container">
         <div className="form">
           {/* <FormModal isActive={isActive} setIsActive={setIsActive} /> */}
-          <Location />
+          {/* <Location /> */}
           {/* <DatePickers /> */}
-          <BasicSelect />
-          <SearchBtn />
+          {/* <BasicSelect /> */}
+          {/* <SearchBtn /> */}
         </div>
       </div>
     </div>
