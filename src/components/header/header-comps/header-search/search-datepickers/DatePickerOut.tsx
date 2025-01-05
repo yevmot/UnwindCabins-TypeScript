@@ -3,7 +3,7 @@ import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { de } from 'date-fns/locale/de';
 import calendar from './../../../../../img/icons/calendar.svg';
-import './datePicker.css';
+// import './datePicker.css';
 
 const CalendarImg = (): JSX.Element => {
   return (

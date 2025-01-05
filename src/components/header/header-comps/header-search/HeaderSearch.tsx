@@ -5,8 +5,7 @@ import './headerSearch.css';
 import SearchBtn from './search-button/SearchButton';
 import Location from './search-location/SearchLocation';
 import BasicSelect from './search-travellers/SearchTravellers';
-import { DatePickerIn } from './search-datepickers/DatePickerIn';
-import { DatePickerOut } from './search-datepickers/DatePickerOut';
+import { DatePickers } from './search-datepickers/DatePickers';
 
 export const HeaderSearch = (): JSX.Element => {
 //   const [isActive, setIsActive] = useState(false);
@@ -17,8 +16,7 @@ export const HeaderSearch = (): JSX.Element => {
         <div className="form">
           {/* <FormModal isActive={isActive} setIsActive={setIsActive} /> */}
           <Location />
-          <DatePickerIn />
-          <DatePickerOut/>
+          <DatePickers />
           <BasicSelect />
           <SearchBtn />
         </div>
