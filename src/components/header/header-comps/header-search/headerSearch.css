@@ -1,28 +1,29 @@
-/* @import url("./location/style.css");
-@import url("./datepicker/style.css");
-@import url("./travellers/style.css");
-@import url("./button/style.css"); */
-@import url('./headerSearchMedia.css');
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    min-height: 120px;
+    width: 1041px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 4px;
+    
+    position: absolute;
+    bottom: -60px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 2;
+}
 
 .form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1040px;
-    min-height: 120px;
+    min-height: 100%;
+    max-width: 100%;
     gap: 8px;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     padding: 12px 28px;
-}
-.form-container {
-    position: absolute;
-    bottom: -60px;
-    z-index: 2;
-    /* right: 50%; */
-    /* transform: translateX(50%); */
 }
 .form input,
 .travellers,

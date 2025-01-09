@@ -9,8 +9,9 @@
         padding: 87px 115px 0 18px;
         transition: all 0.3s ease 0s;
         z-index: 101;
-        background-color: black;
+        background-color: white;
         height: 100%;
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
     }
     .menu-closed {
         left: -500px;
@@ -23,10 +24,9 @@
     }
     .menu .login {
         margin-top: 30px;
-        background-color: rgb(255, 255, 255)
     }
     .menu span {
-        color: white;
+        color: black;
     }
 
 /* ~~~ BURGER ~~~ */

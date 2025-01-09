@@ -15,7 +15,7 @@ export default function BasicSelect(): React.JSX.Element {
   };
 
   return (
-    <Box sx={{ minWidth: 140, backgroundColor: '#EAEAEA' }}>
+    <Box sx={{ borderRadius: '4px', minWidth: 140, backgroundColor: '#EAEAEA' }}>
       <FormControl className='formControl' fullWidth>
         <InputLabel
           sx={{

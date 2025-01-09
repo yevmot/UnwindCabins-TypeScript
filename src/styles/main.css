@@ -16,6 +16,7 @@ body {
 }
 header {
     padding: 0 0 87px;
+    position: relative;
 }
 main {
     padding-top: 87px;

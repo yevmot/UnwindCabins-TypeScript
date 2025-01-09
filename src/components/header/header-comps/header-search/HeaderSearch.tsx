@@ -1,26 +1,22 @@
-// import React, { useState } from "react";
-
 import { JSX } from 'react';
-import './headerSearch.css';
 import SearchBtn from './search-button/SearchButton';
 import Location from './search-location/SearchLocation';
 import BasicSelect from './search-travellers/SearchTravellers';
 import { DatePickers } from './search-datepickers/DatePickers';
+import './headerSearch.css';
+import './headerSearchMedia.css';
 
 export const HeaderSearch = (): JSX.Element => {
-//   const [isActive, setIsActive] = useState(false);
-
   return (
-    <div className="container">
-      <div className="form-container">
-        <div className="form">
-          {/* <FormModal isActive={isActive} setIsActive={setIsActive} /> */}
-          <Location />
-          <DatePickers />
-          <BasicSelect />
-          <SearchBtn />
-        </div>
+    <div className="container form-container">
+      {/* <div className="form-container"> */}
+      <div className="form">
+        <Location />
+        <DatePickers />
+        <BasicSelect />
+        <SearchBtn />
       </div>
+      {/* </div> */}
     </div>
   );
 };
