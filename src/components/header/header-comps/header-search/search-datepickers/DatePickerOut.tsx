@@ -1,11 +1,11 @@
-import { JSX } from 'react';
+import { FC, JSX } from 'react';
 import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { de } from 'date-fns/locale/de';
 import calendar from './../../../../../img/icons/calendar.svg';
 import { CalendarLabel } from './CalendarLabel';
 
-export const DatePickerOut = (): JSX.Element => {
+export const DatePickerOut= (): JSX.Element => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={de}>
       <div className="date-wrapper">

@@ -6,7 +6,7 @@ import './datePicker.css';
 export const DatePickers = (): JSX.Element => {
   return (
     <div className="date-pickers">
-      <DatePickerIn />
+      <DatePickerIn/>
       <DatePickerOut/>
     </div>
   );
