@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 26px 15px;
 }
+/*____________________ LOGO ____________________*/
 .logo{
     z-index: 102;
 }
@@ -13,39 +14,33 @@
 .logo__second-half {
     color: var(--dark-green);
 }
+/*____________________ MENU ____________________*/
 .menu {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 32px;
 }
-.menu span {
+.menu li {
     display: inline-block;
     transition: transform 0.5s ease;
 }
-.menu span:hover {
+.menu li:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
-.menu .login {
+/*____________________ LOGIN ____________________*/
+.login button {
     border: 1px solid #3f3f3f;
     line-height: 1;
-    transition: all 0.5s ease;
     border-radius: 50%;
     width: 48px;
     height: 48px;
-    position: relative;
+    transition: all 0.5s ease;
 }
-.login:hover {
-    box-shadow: 0 0 12px #3f3f3f98;
+.login button:hover {
+    transform: scale(1.05);
 }
-.login button {
-    width: 46px;
-    height: 46px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.header-burger {
-    display: none;
+.header-burger:hover {
+    cursor: pointer;
 }

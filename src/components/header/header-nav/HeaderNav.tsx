@@ -4,6 +4,18 @@ import LoginButton from './../../buttons/LoginButton';
 import './headerNav.css';
 import './headerNavMedia.css';
 
+interface NavLink {
+  href: string;
+  text: string;
+}
+
+const navLinks: NavLink[] = [
+  { href: '/', text: 'Our cabins' },
+  { href: '/', text: 'Get inspired' },
+  { href: '/', text: 'Gift a stay' },
+  { href: '/', text: 'About us' },
+];
+
 export const HeaderNav = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -12,8 +24,9 @@ export const HeaderNav = (): JSX.Element => {
   };
 
   return (
-    <div className="container navbar">
+    <nav className="container navbar">
       <Logo/>
+
       <div
         className={`header-burger ${isOpen ? 'active' : ''}`}
         onClick={handleMenu}
@@ -21,26 +34,21 @@ export const HeaderNav = (): JSX.Element => {
         <span></span>
       </div>
 
-      {/* Слой для затемнения */}
-      {isOpen && <div className="overlay" onClick={handleMenu}></div>}
+      <ul className={`menu ${isOpen ? 'menu-open' : 'menu-closed'}`}>
+        {navLinks.map(({ href, text }) => (
+          <li key={text} className='menu-item'>
+            <a href={href} className='menu-link'>
+              <span className='no-select'>{text}</span>
+            </a>
+          </li>
+        ))}
 
-      <div className={`menu ${isOpen ? 'menu-open' : 'menu-closed'}`}>
-        <a href="/" className="menu-link">
-          <span className="no-select">Our cabins</span>
-        </a>
-        <a href="/" className="menu-link">
-          <span className="no-select">Get inspired</span>
-        </a>
-        <a href="/" className="menu-link">
-          <span className="no-select">Gift a stay</span>
-        </a>
-        <a href="/" className="menu-link">
-          <span className="no-select">About us</span>
-        </a>
         <div className="login">
           <LoginButton />
         </div>
-      </div>
-    </div>
+      </ul>
+
+      {isOpen && <div className="overlay" onClick={handleMenu}></div>}
+    </nav>
   );
 };
