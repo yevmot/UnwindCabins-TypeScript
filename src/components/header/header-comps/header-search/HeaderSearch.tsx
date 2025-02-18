@@ -6,7 +6,7 @@ import { DatePickers } from './search-datepickers/DatePickers';
 import { DatePickerIn } from './search-datepickers/DatePickerIn';
 import { DatePickerOut } from './search-datepickers/DatePickerOut';
 import './headerSearch.css';
-import './headerSearchMedia.css';
+// import './headerSearchMedia.css';
 import './search-datepickers/datePicker.css';
 
 export const HeaderSearch = (): JSX.Element => {

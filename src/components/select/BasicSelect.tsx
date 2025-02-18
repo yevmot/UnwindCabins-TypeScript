@@ -22,14 +22,15 @@ export default function BasicSelect({
 }: IBasicSelectProps): JSX.Element {
   return (
     <Box sx={{
-      minWidth: '140px',
-      backgroundColor: '#EAEAEA',
-      height: '54px',
-      borderRadius: '4px',
+      'minWidth': '140px',
+      'backgroundColor': '#EAEAEA',
+      'height': '54px',
+      'borderRadius': '4px',
+      'fieldset': { border: 'none' },
     }}>
       <FormControl fullWidth>
         <InputLabel
-          style={{ color: '#565656' }}
+          style={{ color: '#565656', border: 'none' }}
           sx={{
             'display': 'flex',
             'justifyContent': 'center',
@@ -51,6 +52,11 @@ export default function BasicSelect({
           label={label}
           onChange={onChange}
           IconComponent={(): null => null}
+          sx={{
+            '& .MuiSelect-select': {
+              fontFamily: 'Poppins',
+            },
+          }}
         >
           {options.map((option) => (
             <MenuItem key={option} value={option}>
