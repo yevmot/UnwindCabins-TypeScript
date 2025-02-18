@@ -1,46 +1,23 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import TravImg from './../../../../../img/icons/travellers.svg';
-import './searchTravellers.css';
+import { JSX, useState } from 'react';
+import BasicSelect from './../../../../select/BasicSelect';
+import { SelectChangeEvent } from '@mui/material/Select';
+import travellersIcon from './../../../../../img/icons/travellers.svg';
 
-export default function BasicSelect(): React.JSX.Element {
-  const [count, setCount] = React.useState('');
+export default function Example(): JSX.Element {
+  const [value, setValue] = useState<string>('');
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setCount(event.target.value as string);
+  const handleChange = (event: SelectChangeEvent): void => {
+    setValue(event.target.value);
+    alert(`now value is ${event.target.value}`);
   };
 
   return (
-    <Box sx={{ borderRadius: '4px', minWidth: 140, backgroundColor: '#EAEAEA' }}>
-      <FormControl className='formControl' fullWidth>
-        <InputLabel
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-          }}>
-          <img
-            src={TravImg}
-            alt="Travellers Icon"
-            style={{ marginRight: 12, width: 16, height: 16 }}
-          />
-        Travellers
-        </InputLabel>
-        <Select
-          value={count}
-          label="Travellers"
-          onChange={handleChange}
-        >
-          <MenuItem value={1}>1</MenuItem>
-          <MenuItem value={2}>2</MenuItem>
-          <MenuItem value={3}>3</MenuItem>
-          <MenuItem value={4}>4</MenuItem>
-          <MenuItem value={5}>5</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
+    <BasicSelect
+      value={value}
+      onChange={handleChange}
+      label="Travellers"
+      options={['1', '2', '3', '4', '5']}
+      iconSrc={travellersIcon}
+    />
   );
 }
