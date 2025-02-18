@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { HeaderNav } from './components/header/header-nav/HeaderNav';
+import HeaderNav from './components/header/header-nav/HeaderNav';
 import { HeaderComps } from './components/header/header-comps/HeaderComps';
 
 import './styles/reset.css';

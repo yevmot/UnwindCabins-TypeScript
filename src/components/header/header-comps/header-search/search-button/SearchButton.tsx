@@ -1,14 +1,24 @@
-import BasicButtons from './../../../../buttons/Button';
+import BasicButton from '../../../../buttons/BasicButton';
 import { JSX } from 'react';
 
-const SearchBtn = (): JSX.Element => {
+export default function SearchBtn(): JSX.Element {
   return (
-    <BasicButtons
-      // onClick={() => console.log('click')}
+    <BasicButton
+      onClick={(): void => alert('Clicked Form Button')}
+      variant='contained'
+      sx={{
+        width: '236px',
+        height: '54px',
+        color: 'white',
+        backgroundColor: 'var(--dark-green)',
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: '16px',
+        lineHeight: '28px',
+        textTransform: 'none',
+      }}
     >
       Find available cabins
-    </BasicButtons>
+    </BasicButton>
   );
-};
-
-export default SearchBtn;
+}

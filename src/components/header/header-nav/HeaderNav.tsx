@@ -16,7 +16,7 @@ const navLinks: NavLink[] = [
   { href: '/', text: 'About us' },
 ];
 
-export const HeaderNav = (): JSX.Element => {
+export default function HeaderNav(): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenu = (): void => {
@@ -51,4 +51,4 @@ export const HeaderNav = (): JSX.Element => {
       {isOpen && <div className="overlay" onClick={handleMenu}></div>}
     </nav>
   );
-};
+}
