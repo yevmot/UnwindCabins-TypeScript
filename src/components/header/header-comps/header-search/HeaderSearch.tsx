@@ -1,13 +1,12 @@
 import { JSX } from 'react';
 import SearchBtn from './search-button/SearchButton';
 import Location from './search-location/SearchLocation';
-import BasicSelect from './search-travellers/SearchTravellers';
 import CheckInDate from './search-datepickers/CheckInDate';
 import CheckOutDate from './search-datepickers/CheckOutDate';
+import BasicSelect from './search-travellers/SearchTravellers';
 import './headerSearch.css';
-// import './headerSearchMedia.css';
 import './search-datepickers/datePicker.css';
-import calendarIcon from './../../../../img/icons/calendar.svg';
+// import './headerSearchMedia.css';
 
 export const HeaderSearch = (): JSX.Element => {
   return (
