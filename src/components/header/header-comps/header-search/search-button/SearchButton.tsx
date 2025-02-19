@@ -4,7 +4,7 @@ import { JSX } from 'react';
 export default function SearchBtn(): JSX.Element {
   return (
     <BasicButton
-      onClick={(): void => alert('Clicked Form Button')}
+      onClick={(): void => console.log('Clicked Form Button')}
       variant='contained'
       sx={{
         width: '236px',

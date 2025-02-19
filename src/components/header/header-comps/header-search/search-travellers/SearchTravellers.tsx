@@ -8,7 +8,7 @@ export default function Example(): JSX.Element {
 
   const handleChange = (event: SelectChangeEvent): void => {
     setValue(event.target.value);
-    alert(`now value is ${event.target.value}`);
+    console.log(`Value of travellers ${event.target.value}`);
   };
 
   return (
