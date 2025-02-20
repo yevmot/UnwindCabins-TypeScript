@@ -1,8 +1,11 @@
-import { JSX, useState } from 'react';
+import { JSX } from 'react';
 import BasicAutoComplete from '../../../../autoComplete/BasicAutoComplete';
 import locationIcon from './../../../../../img/icons/map.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from './../../../../../store/store';
+import { setLocation } from './../../../../../store/reducers/locationSlice';
 
-const locations = [
+const locationsArray = [
   'Hampshire · England',
   'Lake District · England',
   'Cotswolds · England',
@@ -16,20 +19,20 @@ const locations = [
 ];
 
 const Location = (): JSX.Element => {
-  const [value, setValue] = useState<string>('');
+  const dispatch = useDispatch();
+  const location = useSelector((state: RootState) => state.location.location);
 
   return (
     <BasicAutoComplete
-      options={locations}
+      options={locationsArray}
       iconSrc={locationIcon}
       label="I want to go"
-      value={value}
-      onChange={
-        (_, newValue): void => {
-          setValue(newValue || '');
-          console.log(newValue);
+      value={location}
+      onChange={(_: React.SyntheticEvent<Element, Event>, value: string | null): void => {
+        if (value) {
+          dispatch(setLocation(value));
         }
-      }
+      }}
     />
   );
 };

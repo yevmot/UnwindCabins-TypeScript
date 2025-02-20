@@ -17,7 +17,6 @@ export default function CheckOutDate(): JSX.Element {
       onChange={(date): void => {
         if (date) {
           dispatch(setCheckOutDate(date.toISOString())); // Отправляем дату выезда в Redux
-          console.log('Check Out date from Redux: ', date.toISOString()); // Выводим в консоль
         }
       }}
       src={calendarIcon}
