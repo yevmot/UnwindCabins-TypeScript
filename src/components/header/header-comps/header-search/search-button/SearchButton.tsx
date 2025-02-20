@@ -6,6 +6,7 @@ export default function SearchBtn(): JSX.Element {
     <BasicButton
       onClick={(): void => console.log('Clicked Form Button')}
       variant='contained'
+      disabled
       sx={{
         width: '236px',
         height: '54px',

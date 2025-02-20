@@ -42,7 +42,7 @@ export default function BasicDatePicker({
   text,
   value,
   onChange,
-  minDate = new Date(),
+  minDate,
   maxDate,
 }: IDatePickerProps): JSX.Element {
   return (
