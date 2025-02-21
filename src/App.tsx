@@ -8,7 +8,6 @@ import './styles/main.css';
 const App = (): JSX.Element => {
   return (
     <div className="App">
-      {/* <FormModal /> */}
       <header>
         <HeaderNav />
         <HeaderComps />

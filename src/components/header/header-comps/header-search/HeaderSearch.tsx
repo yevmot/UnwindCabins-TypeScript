@@ -6,6 +6,7 @@ import CheckOutDate from './search-datepickers/CheckOutDate';
 import BasicSelect from './search-travellers/SearchTravellers';
 import './headerSearch.css';
 import './search-datepickers/datePicker.css';
+import SearchModal from './search-modal/searchModal';
 // import './headerSearchMedia.css';
 
 export const HeaderSearch = (): JSX.Element => {
@@ -17,6 +18,8 @@ export const HeaderSearch = (): JSX.Element => {
         <CheckOutDate/>
         <BasicSelect />
         <SearchBtn />
+
+        <SearchModal/>
       </div>
     </div>
   );

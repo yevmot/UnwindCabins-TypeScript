@@ -1,9 +1,12 @@
 import BasicButton from '../../../../buttons/BasicButton';
 import { JSX } from 'react';
-import { useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from './../../../../../store/reducers/modalSlice';
 
 export default function SearchBtn(): JSX.Element {
+  const dispatch = useDispatch();
+
   const location = useSelector((state: RootState) => state.location.location);
   const checkInDate = useSelector((state: RootState) => state.date.checkInDate);
   const checkOutDate = useSelector((state: RootState) => state.date.checkOutDate);
@@ -13,7 +16,7 @@ export default function SearchBtn(): JSX.Element {
 
   return (
     <BasicButton
-      onClick={(): void => console.log('Clicked Form Button')}
+      onClick={() => dispatch(openModal())}
       variant='contained'
       disabled = {isButtonDisabled}
       sx={{
