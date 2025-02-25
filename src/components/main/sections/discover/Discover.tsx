@@ -1,4 +1,4 @@
-import Cards from './cards/Cards';
+import Cards from './cards/DiscoverCards';
 import './discover.css';
 import { JSX } from 'react';
 

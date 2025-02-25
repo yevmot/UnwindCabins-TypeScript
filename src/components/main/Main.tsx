@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 import Discover from './sections/discover/Discover';
-// import Inspiration from "./sections/section-inspiration/Inspiration";
+import Inspiration from './sections/inspiration/Inspiration';
 // import Experience from "./sections/section-experience/Experience";
 // import SectionVideo from "./sections/section-video/SectionVideo";
 // import Find from "./sections/section-find/Find";
@@ -11,7 +11,7 @@ const Main = (): JSX.Element => {
   return (
     <main>
       <Discover />
-      {/* <Inspiration /> */}
+      <Inspiration />
       {/* <Experience /> */}
       {/* <SectionVideo /> */}
       {/* <Find /> */}
