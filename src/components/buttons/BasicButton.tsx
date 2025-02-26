@@ -8,7 +8,8 @@ interface ButtonProps {
   children: React.ReactNode;
   sx?: SxProps;
   href?: string;
-  disabled: boolean;
+  disabled?: boolean;
+  icon?: string;
 }
 
 export default function BasicButton({
@@ -18,16 +19,22 @@ export default function BasicButton({
   children,
   sx,
   href,
+  icon,
 }: ButtonProps): JSX.Element {
   return (
     <Button
       disabled={disabled}
       onClick={onClick}
       variant={variant}
-      sx={sx}
       href={href}
+      sx={{
+        textTransform: 'none',
+        fontFamily: 'Poppins',
+        ...sx,
+      }}
     >
       {children}
+      {icon}
     </Button>
   );
 }
