@@ -4,7 +4,7 @@ import './inspiration.css';
 
 const Inspiration = (): JSX.Element => {
   return (
-    <div className="container">
+    <section className="container">
       <div className="inspiration-text">
         <h1 className="inspiration-title">
           <span className="underline">Inspiration</span> for your next
@@ -19,7 +19,7 @@ const Inspiration = (): JSX.Element => {
         </div>
       </div>
       <InspirationCards />
-    </div>
+    </section>
   );
 };
 

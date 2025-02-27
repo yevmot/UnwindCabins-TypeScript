@@ -4,7 +4,7 @@ import { JSX } from 'react';
 
 const Discover = (): JSX.Element => {
   return (
-    <div className="discover-wrapper">
+    <section className="discover-wrapper">
       <div className="container">
         <div className="discover-text">
           <h1 className="discover-title">
@@ -21,7 +21,7 @@ const Discover = (): JSX.Element => {
         </div>
         <Cards />
       </div>
-    </div>
+    </section>
   );
 };
 

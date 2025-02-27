@@ -1,0 +1,30 @@
+.footer-soc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+}
+footer .logo__first-half {
+    color: white;
+}
+footer .logo__second-half {
+    color: #c5fbd8;
+}
+.copyright {
+    color: #909ea2;
+    font-size: 14px;
+    font-weight: 400;
+}
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+.media-img {
+    transition: transform 0.5s ease;
+}
+.media-img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

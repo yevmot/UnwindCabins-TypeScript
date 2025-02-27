@@ -1,0 +1,64 @@
+footer .big-container {
+    background-color: black;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    color: #c1c7cd;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 400;
+    background-color: black;
+    line-height: 1.7;
+    padding-top: 30px;
+}
+.nav-about {
+    display: flex;
+    flex-direction: column;
+    width: 114px;
+}
+.footer-nav h1 {
+    margin-bottom: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--lime);
+}
+.footer-nav h2 {
+    font-weight: 500;
+}
+.footer-nav span {
+    transition: all 0.3s ease;
+}
+.footer-nav span:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: var(--orange);
+}
+.nav-cabins {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+}
+.upper-unit {
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.lower-unit {
+    margin-bottom: 43px;
+    display: flex;
+    flex-direction: column;
+}
+.inspired-wrapper {
+    display: flex;
+    gap: 18px;
+}
+
+.first-column .upper-unit {
+    margin-bottom: 24px;
+}
+.nav-support {
+    display: flex;
+    flex-direction: column;
+    width: 156px;
+}
