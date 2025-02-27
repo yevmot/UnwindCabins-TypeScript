@@ -15,11 +15,7 @@ body {
     color: white;
 }
 header {
-    padding: 0 0 87px;
     position: relative;
-}
-main {
-    padding-top: 40px;
 }
 .big-container {
     margin: 0 auto;

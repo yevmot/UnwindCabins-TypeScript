@@ -1,0 +1,20 @@
+@import url("./cards/inspirationCards.css");
+.inspiration-wrapper {
+    margin-top: 60px;
+}
+.inspiration-title {
+    margin-bottom: 16px;
+    font-family: "Source Serif 4";
+    font-size: 28px;
+    font-weight: 800;
+    color: #22223c;
+}
+
+.inspiration-title .underline::after {
+    width: 85%;
+}
+.inspiration-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
