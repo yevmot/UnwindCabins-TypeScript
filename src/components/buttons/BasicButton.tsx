@@ -28,8 +28,12 @@ export default function BasicButton({
       variant={variant}
       href={href}
       sx={{
-        textTransform: 'none',
-        fontFamily: 'Poppins',
+        'textTransform': 'none',
+        'fontFamily': 'Poppins',
+        'transition': 'all 0.3s ease-in-out',
+        '&:hover': {
+          transform: 'scale(1.02)',
+        },
         ...sx,
       }}
     >

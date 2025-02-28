@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 import HeaderNav from './components/header/header-nav/HeaderNav';
-import { HeaderComps } from './components/header/header-comps/HeaderComps';
+import HeaderComps from './components/header/header-comps/HeaderComps';
 import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 

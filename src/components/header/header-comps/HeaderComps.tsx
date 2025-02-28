@@ -5,7 +5,7 @@ import { HeaderSearch } from './header-search/HeaderSearch';
 
 import './headerComps.css';
 
-export const HeaderComps = (): JSX.Element => {
+export default function HeaderComps(): JSX.Element {
   return (
     <div className="big-container">
       <div className="header-container">
@@ -15,4 +15,4 @@ export const HeaderComps = (): JSX.Element => {
       </div>
     </div>
   );
-};
+}

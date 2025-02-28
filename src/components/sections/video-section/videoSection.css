@@ -42,6 +42,8 @@
     border-radius: 8px;
     width: auto;
     height: 345px;
+
+    transition: all 0.3s ease-in-out;
 }
 .video div {
     height: 345px !important;
@@ -54,4 +56,8 @@
     top: -45px;
     right: -45px;
     z-index: 0;
+}
+
+.video:hover {
+    transform: scale(1.01);
 }
