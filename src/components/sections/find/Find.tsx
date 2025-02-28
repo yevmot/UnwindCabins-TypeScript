@@ -2,6 +2,7 @@ import { JSX } from 'react';
 import Button from '../../buttons/BasicButton';
 import imgBg from './../../../img/find-img-bg.jpg';
 import './find.css';
+import { Link } from 'react-router-dom';
 
 const Find = (): JSX.Element => {
   return (
@@ -22,18 +23,21 @@ const Find = (): JSX.Element => {
                         nourish the mind, body, and spirit leave them feeling
                         rejuvenated and refreshed.
         </p>
-        <Button
-          sx={{
-            backgroundColor: '#f5b963',
-            color: 'black',
-            width: '236px',
-            height: '54px',
-            borderRadius: '4px',
-            fontSize: '16px',
-            fontWeight: '400',
-          }}
-          onClick={(): void => alert('BTN CLICKED')}
-        >{'Find available cabins'}</Button>
+        <Link to='/cabins'>
+          <Button
+            sx={{
+              backgroundColor: '#f5b963',
+              color: 'black',
+              width: '236px',
+              height: '54px',
+              borderRadius: '4px',
+              fontSize: '16px',
+              fontWeight: '400',
+            }}
+            onClick={(): void => alert('BTN CLICKED')}
+          >{'Find available cabins'}
+          </Button>
+        </Link>
       </div>
     </section>
   );

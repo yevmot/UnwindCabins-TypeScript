@@ -4,14 +4,14 @@ import Location from './search-location/SearchLocation';
 import CheckInDate from './search-datepickers/CheckInDate';
 import CheckOutDate from './search-datepickers/CheckOutDate';
 import BasicSelect from './search-travellers/SearchTravellers';
-import './headerSearch.css';
 import './search-datepickers/datePicker.css';
 import SearchModal from './search-modal/searchModal';
+import './searchForm.css';
 // import './headerSearchMedia.css';
 
-export const HeaderSearch = (): JSX.Element => {
+export default function HeaderSearch(): JSX.Element {
   return (
-    <div className="container form-container">
+    <div className="container form-container" id='search-form'>
       <div className="form">
         <Location />
         <CheckInDate/>
@@ -23,4 +23,4 @@ export const HeaderSearch = (): JSX.Element => {
       </div>
     </div>
   );
-};
+}

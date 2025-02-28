@@ -17,19 +17,22 @@ const PreFooter = (): JSX.Element => {
                         from the office with our 3 day weekend getaway cabin
                         retreats.
             </p>
-            <Button
-              onClick={(): void => alert('prefooter')}
-              sx={{
-                bgcolor: '#D4EEEC',
-                color: '#173333',
-                width: '205px',
-                height: '40px',
-                fontSize: '14px',
-                fontWeight: '400',
-              }}
-            >
+            <a href='#search-form'>
+
+              <Button
+                onClick={(): void => alert('prefooter')}
+                sx={{
+                  bgcolor: '#D4EEEC',
+                  color: '#173333',
+                  width: '205px',
+                  height: '40px',
+                  fontSize: '14px',
+                  fontWeight: '400',
+                }}
+              >
             Find the perfect getaway
-            </Button>
+              </Button>
+            </a>
           </div>
           <img className="shadow" src={Shadow} alt="shadow" />
         </div>

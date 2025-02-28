@@ -8,9 +8,9 @@ import Review5 from './../../../../img/revies/client-5.jpg';
 import star from './../../../../img/icons/star.svg';
 import Truspilot from './../../../../img/icons/trustpilot.svg';
 
-import './headerContent.css';
+import './heroContent.css';
 
-const HeaderContent = (): JSX.Element => {
+export default function HeroContent(): JSX.Element {
   const reviewImages = [Review1, Review2, Review3, Review4, Review5];
   const starCount = [1, 2, 3, 4, 5];
 
@@ -54,6 +54,4 @@ const HeaderContent = (): JSX.Element => {
       </div>
     </div>
   );
-};
-
-export default HeaderContent;
+}

@@ -3,7 +3,7 @@ import BasicDatePicker from '../../../../datePicker/BasicDatePicker';
 import calendarIcon from './../../../../../img/icons/calendar.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@app/store/store';
-import { setCheckOutDate } from './../../../../../store/reducers/dateSlice';
+import { setCheckOutDate } from '../../../../../store/reducers/dateSlice';
 
 export default function CheckOutDate(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();

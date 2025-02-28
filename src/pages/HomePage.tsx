@@ -6,10 +6,12 @@ import VideoSection from '../components/sections/video-section/videoSection';
 import Find from '../components/sections/find/Find';
 import About from '../components/sections/about/About';
 import PreFooter from '../components/sections/pre-footer/PreFooter';
+import HeroComps from '../components/sections/hero/HeroComps';
 
-const Main = (): JSX.Element => {
+export default function HomePage(): JSX.Element {
   return (
-    <main>
+    <>
+      <HeroComps/>
       <Discover />
       <Inspiration />
       <Experience />
@@ -17,8 +19,6 @@ const Main = (): JSX.Element => {
       <Find />
       <About />
       <PreFooter />
-    </main>
+    </>
   );
-};
-
-export default Main;
+}

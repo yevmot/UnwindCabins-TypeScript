@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 import DiscoverCards from './cards/DiscoverCards';
 import './discover.css';
+import { Link } from 'react-router-dom';
 
 const Discover = (): JSX.Element => {
   return (
@@ -16,7 +17,9 @@ const Discover = (): JSX.Element => {
                             Fully equipped kitchen and bathroom with plenty of
                             walking and cycling routes to explore.
             </p>
-            <span className="view-all">View all cabins</span>
+            <Link to='/cabins'>
+              <span className="view-all">View all cabins</span>
+            </Link>
           </div>
         </div>
         <DiscoverCards />

@@ -1,10 +1,10 @@
 import { JSX } from 'react';
-import BasicSelect from './../../../../select/BasicSelect';
+import BasicSelect from '../../../../select/BasicSelect';
 import { SelectChangeEvent } from '@mui/material/Select';
 import travellersIcon from './../../../../../img/icons/travellers.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
-import { setTravellers } from './../../../../../store/reducers/travellersSlice';
+import { setTravellers } from '../../../../../store/reducers/travellersSlice';
 
 export default function Example(): JSX.Element {
   const dispatch = useDispatch();

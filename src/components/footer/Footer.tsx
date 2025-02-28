@@ -6,11 +6,11 @@ import './footer.css';
 
 const Footer = (): JSX.Element => {
   return (
-    <footer>
+    <section className='footer-layout'>
       <FooterNav />
       <FooterForm />
       <FooterMedia />
-    </footer>
+    </section>
   );
 };
 

@@ -2,7 +2,7 @@ import BasicButton from '../../../../buttons/BasicButton';
 import { JSX } from 'react';
 import { RootState } from '@app/store/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from './../../../../../store/reducers/modalSlice';
+import { openModal } from '../../../../../store/reducers/modalSlice';
 
 export default function SearchBtn(): JSX.Element {
   const dispatch = useDispatch();

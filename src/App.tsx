@@ -1,21 +1,33 @@
 import { JSX } from 'react';
-import HeaderNav from './components/header/header-nav/HeaderNav';
-import HeaderComps from './components/header/header-comps/HeaderComps';
-import Home from './pages/Home';
-import Footer from './components/footer/Footer';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+import LayOut from './components/layout/Layout';
+
+import HomePage from './pages/HomePage';
+import CabinsPage from './pages/CabinsPage';
+import InspiredPage from './pages/InspiredPage';
+import StayPage from './pages/StayPage';
+import AboutPage from './pages/AboutPage';
 
 import './styles/reset.css';
 import './styles/main.css';
+import ScrollToAnchor from './helpers/ScrollToAnchor';
 
 const App = (): JSX.Element => {
   return (
     <div className="App">
-      <header>
-        <HeaderNav />
-        <HeaderComps />
-      </header>
-      <Home />
-      <Footer />
+      {/* <BrowserRouter> */}
+      <ScrollToAnchor/>
+      <Routes>
+        <Route path='/' element={<LayOut/>}>
+          <Route index element={<HomePage />}/>
+          <Route path='cabins' element={<CabinsPage />}/>
+          <Route path='inspired' element={<InspiredPage />}/>
+          <Route path='stay' element={<StayPage />}/>
+          <Route path='about' element={<AboutPage />}/>
+        </Route>
+      </Routes>
+      {/* </BrowserRouter> */}
     </div>
   );
 };

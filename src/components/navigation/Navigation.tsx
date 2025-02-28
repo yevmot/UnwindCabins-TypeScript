@@ -1,22 +1,24 @@
 import { JSX, useState } from 'react';
-import { Logo } from './../../logo/Logo';
-import LoginButton from './../../buttons/LoginButton';
-import './headerNav.css';
+import { NavLink } from 'react-router-dom';
+
+import { Logo } from '../logo/Logo';
+import LoginButton from '../buttons/LoginButton';
+import './navigation.css';
 import './headerNavMedia.css';
 
 interface NavLink {
-  href: string;
   text: string;
+  to: string;
 }
 
 const navLinks: NavLink[] = [
-  { href: '/OurCabins', text: 'Our cabins' },
-  { href: '/GetInspired', text: 'Get inspired' },
-  { href: '/GiftAStay', text: 'Gift a stay' },
-  { href: '/AboutUs', text: 'About us' },
+  { to: '/cabins', text: 'Our cabins' },
+  { to: '/inspired', text: 'Get inspired' },
+  { to: '/stay', text: 'Gift a stay' },
+  { to: '/about', text: 'About us' },
 ];
 
-export default function HeaderNav(): JSX.Element {
+export default function Navigation(): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenu = (): void => {
@@ -35,11 +37,11 @@ export default function HeaderNav(): JSX.Element {
       </div>
 
       <ul className={`menu ${isOpen ? 'menu-open' : 'menu-closed'}`}>
-        {navLinks.map(({ href, text }) => (
+        {navLinks.map(({ to, text }) => (
           <li key={text} className='menu-item'>
-            <a href={href} className='menu-link'>
+            <NavLink to={to} className='menu-link'>
               <span className='no-select'>{text}</span>
-            </a>
+            </NavLink>
           </li>
         ))}
 

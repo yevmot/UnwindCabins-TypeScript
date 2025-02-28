@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 import InspirationCards from './cards/InspirationCards';
 import './inspiration.css';
+import { Link } from 'react-router-dom';
 
 const Inspiration = (): JSX.Element => {
   return (
@@ -16,7 +17,9 @@ const Inspiration = (): JSX.Element => {
                         We’ve curated some amazing experiences to help you find
                         your next getaway.
             </p>
-            <span className="view-all">View all experiences</span>
+            <Link to='/inspired'>
+              <span className="view-all">View all experiences</span>
+            </Link>
           </div>
         </div>
         <InspirationCards />

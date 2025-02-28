@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import './about.css';
 
 import { aboutQuestions } from './../../../data/aboutQuestions';
+import { Link } from 'react-router-dom';
 
 const About = (): JSX.Element => {
   const Arrow = (): JSX.Element => {
@@ -29,15 +30,17 @@ const About = (): JSX.Element => {
                 ))}
               </ul>
             </div>
-            <div className="btn">
-              <Button
-                onClick={(): void => alert('ABOUT CLICKED')}
-                sx={{ fontWeight: '500', fontSize: '14px' }}
-              >
-                {question.title}
-                <Arrow />
-              </Button>
-            </div>
+            <Link to={`/about#question-${index + 1}`}>
+              <div className="btn">
+                <Button
+                  onClick={(): void => console.log('ABOUT CLICKED')}
+                  sx={{ fontWeight: '500', fontSize: '14px' }}
+                >
+                  {question.title}
+                  <Arrow />
+                </Button>
+              </div>
+            </Link>
           </div>
         ))}
 

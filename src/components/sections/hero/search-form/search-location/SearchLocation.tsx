@@ -2,8 +2,8 @@ import { JSX } from 'react';
 import BasicAutoComplete from '../../../../autoComplete/BasicAutoComplete';
 import locationIcon from './../../../../../img/icons/map.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from './../../../../../store/store';
-import { setLocation } from './../../../../../store/reducers/locationSlice';
+import { RootState } from '../../../../../store/store';
+import { setLocation } from '../../../../../store/reducers/locationSlice';
 
 const locationsArray = [
   'Hampshire · England',

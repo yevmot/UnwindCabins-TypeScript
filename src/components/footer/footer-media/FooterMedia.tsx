@@ -14,7 +14,7 @@ const FooterSoc = (): JSX.Element => {
           </a>
         </div>
 
-        <div className="copyright">© 2023 UnwindCabins</div>
+        <div className="copyright">© 2025 UnwindCabins</div>
 
         <div className="media">
           {

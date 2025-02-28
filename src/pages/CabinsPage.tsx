@@ -2,9 +2,9 @@ import { JSX } from 'react';
 
 const OurCabins = (): JSX.Element => {
   return (
-    <main>
+    <section style={{ fontSize: '50px', color: 'black', display: 'flex', justifyContent: 'center', margin: '50px' }}>
         Our Cabins
-    </main>
+    </section>
   );
 };
 

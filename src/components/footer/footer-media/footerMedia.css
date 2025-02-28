@@ -4,10 +4,10 @@
     align-items: center;
     padding: 64px 0;
 }
-footer .logo__first-half {
+.footer-soc .logo__first-half {
     color: white;
 }
-footer .logo__second-half {
+.footer-soc .logo__second-half {
     color: #c5fbd8;
 }
 .copyright {
