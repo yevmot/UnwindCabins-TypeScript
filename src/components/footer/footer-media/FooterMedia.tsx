@@ -8,7 +8,7 @@ const FooterSoc = (): JSX.Element => {
     <div className="big-container">
       <div className="container footer-soc">
         <div className="logo no-select">
-          <a href="#">
+          <a href="/">
             <label className="logo__first-half">Unwind</label>
             <label className="logo__second-half">Cabins</label>
           </a>

@@ -10,10 +10,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: '/', text: 'Our cabins' },
-  { href: '/', text: 'Get inspired' },
-  { href: '/', text: 'Gift a stay' },
-  { href: '/', text: 'About us' },
+  { href: '/OurCabins', text: 'Our cabins' },
+  { href: '/GetInspired', text: 'Get inspired' },
+  { href: '/GiftAStay', text: 'Gift a stay' },
+  { href: '/AboutUs', text: 'About us' },
 ];
 
 export default function HeaderNav(): JSX.Element {
