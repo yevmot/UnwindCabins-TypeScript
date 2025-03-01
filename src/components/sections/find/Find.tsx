@@ -34,7 +34,6 @@ const Find = (): JSX.Element => {
               fontSize: '16px',
               fontWeight: '400',
             }}
-            onClick={(): void => alert('BTN CLICKED')}
           >{'Find available cabins'}
           </Button>
         </Link>

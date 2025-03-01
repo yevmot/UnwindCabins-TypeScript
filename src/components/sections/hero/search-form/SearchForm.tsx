@@ -11,7 +11,7 @@ import './searchForm.css';
 
 export default function HeaderSearch(): JSX.Element {
   return (
-    <div className="container form-container" id='search-form'>
+    <div className="container form-container">
       <div className="form">
         <Location />
         <CheckInDate/>

@@ -19,7 +19,9 @@ export default function BasicModal({ title, content }: BasicModalProps): JSX.Ele
     <div>
       <Modal
         open={modalState}
-        onClose={() => dispatch(closeModal())}
+        onClose={(): void => {
+          dispatch(closeModal());
+        }}
       >
         <Box
           sx={{

@@ -33,7 +33,6 @@ const About = (): JSX.Element => {
             <Link to={`/about#question-${index + 1}`}>
               <div className="btn">
                 <Button
-                  onClick={(): void => console.log('ABOUT CLICKED')}
                   sx={{ fontWeight: '500', fontSize: '14px' }}
                 >
                   {question.title}

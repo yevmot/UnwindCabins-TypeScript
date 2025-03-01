@@ -17,10 +17,8 @@ const PreFooter = (): JSX.Element => {
                         from the office with our 3 day weekend getaway cabin
                         retreats.
             </p>
-            <a href='#search-form'>
-
+            <a href='#hero-title'>
               <Button
-                onClick={(): void => alert('prefooter')}
                 sx={{
                   bgcolor: '#D4EEEC',
                   color: '#173333',

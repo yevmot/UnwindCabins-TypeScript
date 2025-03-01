@@ -1,4 +1,3 @@
-import { longFormatters } from 'date-fns';
 import { JSX } from 'react';
 
 const AboutUs = (): JSX.Element => {

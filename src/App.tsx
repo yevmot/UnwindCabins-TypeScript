@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import LayOut from './components/layout/Layout';
 
@@ -16,7 +16,7 @@ import ScrollToAnchor from './helpers/ScrollToAnchor';
 const App = (): JSX.Element => {
   return (
     <div className="App">
-      {/* <BrowserRouter> */}
+
       <ScrollToAnchor/>
       <Routes>
         <Route path='/' element={<LayOut/>}>
@@ -27,7 +27,6 @@ const App = (): JSX.Element => {
           <Route path='about' element={<AboutPage />}/>
         </Route>
       </Routes>
-      {/* </BrowserRouter> */}
     </div>
   );
 };

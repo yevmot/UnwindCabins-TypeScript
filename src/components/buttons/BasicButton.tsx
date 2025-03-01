@@ -3,7 +3,7 @@ import { SxProps } from '@mui/system';
 import { JSX } from 'react';
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   variant?: 'contained' | 'outlined' | 'text';
   children: React.ReactNode;
   sx?: SxProps;

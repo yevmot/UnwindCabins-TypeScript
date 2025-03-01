@@ -16,7 +16,9 @@ export default function SearchBtn(): JSX.Element {
 
   return (
     <BasicButton
-      onClick={() => dispatch(openModal())}
+      onClick={(): void => {
+        dispatch(openModal());
+      }}
       variant='contained'
       disabled = {isButtonDisabled}
       sx={{

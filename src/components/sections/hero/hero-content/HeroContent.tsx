@@ -15,17 +15,17 @@ export default function HeroContent(): JSX.Element {
   const starCount = [1, 2, 3, 4, 5];
 
   return (
-    <div className="header-content">
-      <h1 className="title">
+    <div className="hero-content">
+      <h1 className="title" id='hero-title'>
                 Leave the office behind and{' '}
         <span className="highlight">unwind</span>
       </h1>
-      <p className="header-text">
+      <p className="hero-text">
                 Welcome to our cozy cabin nestled in the heart of the mountains!
                 Our cabin is the perfect getaway for those seeking peace and
                 relaxation in a natural setting.
       </p>
-      <div className="header-reviews">
+      <div className="hero-reviews">
         <div className="review-imgs">
           <div className="review-imgs">
             {reviewImages.map((image, index) => (
