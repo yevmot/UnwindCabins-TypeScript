@@ -1,7 +1,7 @@
 import { JSX } from 'react';
+import { Link } from 'react-router-dom';
 import DiscoverCards from './cards/DiscoverCards';
 import './discover.css';
-import { Link } from 'react-router-dom';
 
 const Discover = (): JSX.Element => {
   return (
@@ -22,7 +22,7 @@ const Discover = (): JSX.Element => {
             </Link>
           </div>
         </div>
-        <DiscoverCards />
+        <DiscoverCards/>
       </div>
     </section>
   );

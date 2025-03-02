@@ -1,27 +1,45 @@
 import { JSX } from 'react';
+import { motion } from 'framer-motion';
+import { createTextAnimation } from './../../../types/textAnimation';
 import star from './../../../img/icons/star.svg';
 import bgImg from './../../../img/exp-igm.jpg';
 import './experience.css';
 
 const Experience = (): JSX.Element => {
   const starCount = [1, 2, 3, 4, 5];
+  const textAnimation = createTextAnimation({ x: 100 });
 
   return (
     <section className="experience">
       <div className="big-container">
         <img src={bgImg} alt="bg-img" />
-        <div className="exp-content">
-          <div className="title">A truly wonderful experience</div>
-          <p>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          className="exp-content">
+          <motion.div
+            variants={textAnimation}
+            custom={1}
+            className="title">A truly wonderful experience</motion.div>
+          <motion.p
+            variants={textAnimation}
+            custom={2}
+          >
             Brilliant for anyone looking to get away from the hustle and bustle
             of city life or detox from their tech for a few days. I could have
             stayed another week!
-          </p>
-          <p>
+          </motion.p>
+          <motion.p
+            variants={textAnimation}
+            custom={3}
+          >
             'They really have thought about everything here down to the finest
             details.'
-          </p>
-          <div className="review-stars">
+          </motion.p>
+          <motion.div
+            variants={textAnimation}
+            custom={4}
+            className="review-stars">
             <div className="stars">
               {starCount.map((_, index) => (
                 <div className="star" key={index}>
@@ -30,8 +48,8 @@ const Experience = (): JSX.Element => {
               ))}
             </div>
             <span className="points">01 Jan 2023</span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

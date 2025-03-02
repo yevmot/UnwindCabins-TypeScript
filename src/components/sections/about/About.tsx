@@ -1,12 +1,16 @@
 import arrow from './../../../img/icons/arrow-right-circle.svg';
 import Button from '../../buttons/BasicButton';
 import { JSX } from 'react';
+import { motion } from 'framer-motion';
+import { createTextAnimation } from './../../../types/textAnimation';
 import './about.css';
 
 import { aboutQuestions } from './../../../data/aboutQuestions';
 import { Link } from 'react-router-dom';
 
 const About = (): JSX.Element => {
+  const textAnimation = createTextAnimation({ x: -100 });
+
   const Arrow = (): JSX.Element => {
     return <>
       <img src={arrow} alt='arrow'/>
@@ -14,31 +18,45 @@ const About = (): JSX.Element => {
   };
 
   return (
-    <section className="about-wrapper">
-      <div className="container">
+    <motion.section
+      initial='hidden'
+      whileInView='visible'
+      className="about-wrapper">
+      <motion.div
+        variants={textAnimation}
+        custom={2}
+        className="container">
         <div className="about-title">
           <h1>Frequently asked questions</h1>
         </div>
 
         {aboutQuestions.map((question, index) => (
           <div className="about-info" key={index}>
-            <div className="desc">
+            <motion.div
+              variants={textAnimation}
+              custom={3}
+              className="desc">
               <h1>{index + 1} {question.title}</h1>
               <ul>
                 {question.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
+                  <li
+                    key={itemIndex}
+                  >{item}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
             <Link to={`/about#question-${index + 1}`}>
-              <div className="btn">
+              <motion.div
+                variants={textAnimation}
+                custom={4}
+                className="btn">
                 <Button
                   sx={{ fontWeight: '500', fontSize: '14px' }}
                 >
                   {question.title}
                   <Arrow />
                 </Button>
-              </div>
+              </motion.div>
             </Link>
           </div>
         ))}
@@ -51,8 +69,8 @@ const About = (): JSX.Element => {
                         more than happy to help.
           </p>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

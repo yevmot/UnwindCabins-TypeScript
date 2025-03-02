@@ -1,4 +1,6 @@
 import { JSX } from 'react';
+import { motion } from 'framer-motion';
+import { createTextAnimation } from './../../../../types/textAnimation';
 
 import Review1 from './../../../../img/revies/client-1.jpg';
 import Review2 from './../../../../img/revies/client-2.jpg';
@@ -10,22 +12,37 @@ import Truspilot from './../../../../img/icons/trustpilot.svg';
 
 import './heroContent.css';
 
+const textAnimation = createTextAnimation({ x: -100 });
+
 export default function HeroContent(): JSX.Element {
   const reviewImages = [Review1, Review2, Review3, Review4, Review5];
   const starCount = [1, 2, 3, 4, 5];
 
   return (
-    <div className="hero-content">
-      <h1 className="title" id='hero-title'>
+    <motion.div className="hero-content"
+      initial = 'hidden'
+      whileInView = 'visible'
+    >
+      <motion.h1
+        variants={textAnimation}
+        custom={1}
+        className="title" id='hero-title'>
                 Leave the office behind and{' '}
         <span className="highlight">unwind</span>
-      </h1>
-      <p className="hero-text">
+      </motion.h1>
+      <motion.p
+        custom={2}
+        variants={textAnimation}
+        className="hero-text"
+      >
                 Welcome to our cozy cabin nestled in the heart of the mountains!
                 Our cabin is the perfect getaway for those seeking peace and
                 relaxation in a natural setting.
-      </p>
-      <div className="hero-reviews">
+      </motion.p>
+      <motion.div
+        custom={3}
+        variants={textAnimation}
+        className="hero-reviews">
         <div className="review-imgs">
           <div className="review-imgs">
             {reviewImages.map((image, index) => (
@@ -51,7 +68,7 @@ export default function HeroContent(): JSX.Element {
           </div>
           <span className="points">4.5 / 5</span>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

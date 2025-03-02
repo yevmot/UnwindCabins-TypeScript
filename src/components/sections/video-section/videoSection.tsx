@@ -1,8 +1,12 @@
 import { JSX } from 'react';
+import { motion } from 'framer-motion';
+import { createTextAnimation } from './../../../types/textAnimation';
 import ReactPlayer from 'react-player/youtube';
 import Play from './../../../img/icons/play.svg';
 import Details from './../../../img/bg-detail.svg';
 import './videoSection.css';
+
+const textAnimation = createTextAnimation({ x: -100 });
 
 const VideoSrc = 'https://youtu.be/bjlUhtXSi5w?si=tC7Zs9ONwNWb5lho';
 
@@ -11,30 +15,48 @@ const VideoSection = (): JSX.Element => {
     <section className="section-wrapper">
       <div className="big-container">
         <div className="container wrapper">
-          <div className="video-content">
-            <div className="title">
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            className="video-content">
+            <motion.div
+              variants={textAnimation}
+              custom={2}
+              className="title">
               <span className="underline">Get ready</span> to
                             unwind
-            </div>
+            </motion.div>
             <div className="video-desc">
-              <p>
+              <motion.p
+                variants={textAnimation}
+                custom={3}
+              >
                                 A cabin getaway can be a wonderful way to relax
                                 and reconnect with nature. Many cabin rentals
                                 are located in beautiful, secluded areas,
                                 surrounded by trees and other natural beauty.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                variants={textAnimation}
+                custom={4}
+              >
                                 A cabin getaway can be a wonderful way to escape
                                 the hustle and bustle of daily life and
                                 reconnect with nature.
-              </p>
+              </motion.p>
             </div>
-            <span className="view-all ">
+            <motion.span
+              variants={textAnimation}
+              custom={5}
+              className="view-all ">
                             Learn more{' '}
               <span className="greater-than">&gt;</span>
-            </span>
-          </div>
-          <div className="video-wrapper">
+            </motion.span>
+          </motion.div>
+          <motion.div
+            initial = 'hidden'
+            whileInView = 'visible'
+            className="video-wrapper">
             <div className="video">
               <ReactPlayer
                 light
@@ -48,7 +70,7 @@ const VideoSection = (): JSX.Element => {
             <div className="details">
               <img src={Details} alt="details" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

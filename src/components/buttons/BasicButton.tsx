@@ -2,9 +2,10 @@ import Button from '@mui/material/Button';
 import { SxProps } from '@mui/system';
 import { JSX } from 'react';
 
+// Интерфейс для обычных пропсов кнопки
 interface ButtonProps {
   onClick?: () => void;
-  variant?: 'contained' | 'outlined' | 'text';
+  variant?: 'contained' ;
   children: React.ReactNode;
   sx?: SxProps;
   href?: string;

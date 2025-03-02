@@ -1,8 +1,12 @@
 import BgImg from './../../../img/pre-footer-bg.jpg';
 import Shadow from './../../../img/pre-footer-shadow.png';
 import Button from '../../buttons/BasicButton';
+import { motion } from 'framer-motion';
 import './preFooter.css';
 import { JSX } from 'react';
+import { createTextAnimation } from './../../../types/textAnimation';
+
+const textAnimation = createTextAnimation({ y: -100 });
 
 const PreFooter = (): JSX.Element => {
   return (
@@ -10,14 +14,26 @@ const PreFooter = (): JSX.Element => {
       <div className="big-container">
         <div className="pre-footer-container">
           <img src={BgImg} alt="BgImg" className="bg-footer" />
-          <div className="pre-footer-content">
-            <div className="title">Escape from endless Zoom calls</div>
-            <p>
+          <motion.div
+            initial = 'hidden'
+            whileInView= 'visible'
+            className="pre-footer-content">
+            <motion.div
+              variants={textAnimation}
+              custom={2}
+              className="title">Escape from endless Zoom calls</motion.div>
+            <motion.p
+              variants={textAnimation}
+              custom={3}
+            >
                         Discover the wonders of spending time offline and away
                         from the office with our 3 day weekend getaway cabin
                         retreats.
-            </p>
-            <a href='#hero-title'>
+            </motion.p>
+            <motion.a
+              variants={textAnimation}
+              custom={4}
+              href='#hero-title'>
               <Button
                 sx={{
                   bgcolor: '#D4EEEC',
@@ -30,8 +46,8 @@ const PreFooter = (): JSX.Element => {
               >
             Find the perfect getaway
               </Button>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
           <img className="shadow" src={Shadow} alt="shadow" />
         </div>
       </div>
