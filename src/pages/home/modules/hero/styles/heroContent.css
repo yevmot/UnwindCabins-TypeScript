@@ -27,13 +27,13 @@
     height: 47px;
     position: relative;
 }
+.review-imgs {
+    display: flex;
+}
 .review-img img {
     outline: 2px solid black;
     outline-offset: -2px;
     border-radius: 50%;
-    /* width: 47px; */
-    width: calc(27px + 20 * (100vw / 1561));
-    height: auto;
 }
 .review-1,
 .review-2,
@@ -42,28 +42,25 @@
 .review-5 {
     position: absolute;
     top: 0;
-    /* width: 47px; */
-    width: calc(27px + 20 * (100vw / 1561));
-    height: auto;
 }
 .review-1 {
     left: 0;
     z-index: 1;
 }
 .review-2 {
-    left: 40px;
+    left: 8%;
     z-index: 2;
 }
 .review-3 {
-    left: 80px;
+    left: 16%;
     z-index: 3;
 }
 .review-4 {
-    left: 120px;
+    left: 24%;
     z-index: 4;
 }
 .review-5 {
-    left: 160px;
+    left: 32%;
     z-index: 5;
 }
 .review-stars {

@@ -1,4 +1,4 @@
-import BasicButton from '../../../../buttons/BasicButton';
+import BasicButton from '../../../../../components/buttons/BasicButton';
 import { JSX } from 'react';
 import { RootState } from '@app/store/store';
 import { useDispatch, useSelector } from 'react-redux';

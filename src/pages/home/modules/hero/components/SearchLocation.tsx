@@ -1,30 +1,19 @@
-import { JSX } from 'react';
-import BasicAutoComplete from '../../../../autoComplete/BasicAutoComplete';
-import locationIcon from './../../../../../img/icons/map.svg';
+import { ReactElement } from 'react';
+import BasicAutoComplete from '../../../../../components/autoComplete/BasicAutoComplete';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../../store/store';
 import { setLocation } from '../../../../../store/reducers/locationSlice';
+import { locationData } from './../mock-data/locationData';
 
-const locationsArray = [
-  'Hampshire · England',
-  'Lake District · England',
-  'Cotswolds · England',
-  'Cornwall · England',
-  'Yorkshire Dales · England',
-  'Peak District · England',
-  'Norfolk Broads · England',
-  'Isle of Wight · England',
-  'Dorset · England',
-  'Bath · England',
-];
+import { locationIcon } from '../constants/images/locationIcon';
 
-const Location = (): JSX.Element => {
+export const Location = (): ReactElement => {
   const dispatch = useDispatch();
   const location = useSelector((state: RootState) => state.location.location);
 
   return (
     <BasicAutoComplete
-      options={locationsArray}
+      options={locationData}
       iconSrc={locationIcon}
       label="I want to go"
       value={location}
@@ -36,5 +25,3 @@ const Location = (): JSX.Element => {
     />
   );
 };
-
-export default Location;

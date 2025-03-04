@@ -1,11 +1,12 @@
-import { JSX } from 'react';
-import BasicDatePicker from '../../../../datePicker/BasicDatePicker';
-import calendarIcon from './../../../../../img/icons/calendar.svg';
+import { ReactElement } from 'react';
+import BasicDatePicker from '../../../../../components/datePicker/BasicDatePicker';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@app/store/store';
 import { setCheckOutDate } from '../../../../../store/reducers/dateSlice';
 
-export default function CheckOutDate(): JSX.Element {
+const calendarIcon = './../../../../../img/icons/calendar.svg';
+
+export const SearchCheckOut = (): ReactElement => {
   const dispatch = useDispatch<AppDispatch>();
   const selectedDate = useSelector((state: RootState) => state.date.checkOutDate);
   const checkInDate = useSelector((state: RootState) => state.date.checkInDate);
@@ -23,4 +24,4 @@ export default function CheckOutDate(): JSX.Element {
       text='Check Out'
     />
   );
-}
+};

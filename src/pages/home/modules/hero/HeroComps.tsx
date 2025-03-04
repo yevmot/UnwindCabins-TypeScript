@@ -1,15 +1,15 @@
 import { JSX } from 'react';
-import HeroBg from './hero-bg/HeroBg';
-import HeroContent from './hero-content/HeroContent';
-import SearchForm from './search-form/SearchForm';
+import { HeroBackground } from './components/HeroBackground';
+import { HeroContent } from './components/HeroContent';
+import SearchForm from './components/SearchForm';
 
-import './heroComps.css';
+import './styles/heroComps.css';
 
 export default function HeroComps(): JSX.Element {
   return (
     <section className="hero-container">
       <div className="big-container">
-        <HeroBg />
+        <HeroBackground />
         <HeroContent />
         <SearchForm />
       </div>

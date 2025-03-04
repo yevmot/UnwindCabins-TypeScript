@@ -1,11 +1,12 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../../../../../store/store';
 import { setCheckInDate } from '../../../../../store/reducers/dateSlice';
-import BasicDatePicker from '../../../../datePicker/BasicDatePicker';
-import calendarIcon from './../../../../../img/icons/calendar.svg';
+import BasicDatePicker from '../../../../../components/datePicker/BasicDatePicker';
 
-export default function CheckInDate(): JSX.Element {
+const calendarIcon = './../../../../../img/icons/calendar.svg';
+
+export const SearchCheckIn = (): ReactElement => {
   const dispatch = useDispatch<AppDispatch>();
   const selectedDate = useSelector((state: RootState) => state.date.checkInDate);
   const checkOutDate = useSelector((state: RootState) => state.date.checkOutDate);
@@ -24,4 +25,4 @@ export default function CheckInDate(): JSX.Element {
       text='Check In'
     />
   );
-}
+};

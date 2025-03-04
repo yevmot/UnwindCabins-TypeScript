@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import BasicModal from '../../../../modal/BasicModal';
+import BasicModal from '../../../../../components/modal/BasicModal';
 import { useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
 import { format } from 'date-fns/format';

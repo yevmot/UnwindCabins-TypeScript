@@ -1,9 +1,9 @@
 import { JSX } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import LayOut from './components/layout/Layout';
+import LayOut from './Layout';
 
-import HomePage from './pages/HomePage';
+import { HomePage } from './pages/home/HomePage';
 import CabinsPage from './pages/CabinsPage';
 import InspiredPage from './pages/InspiredPage';
 import StayPage from './pages/StayPage';
