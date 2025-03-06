@@ -1,10 +1,8 @@
 import { ReactElement } from 'react';
-import BasicDatePicker from '../../../../../components/datePicker/BasicDatePicker';
+import { DatePickerComponent } from '../../../../../components/datePicker/DatePickerComponent';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@app/store/store';
 import { setCheckOutDate } from '../../../../../store/reducers/dateSlice';
-
-const calendarIcon = './../../../../../img/icons/calendar.svg';
 
 export const SearchCheckOut = (): ReactElement => {
   const dispatch = useDispatch<AppDispatch>();
@@ -12,16 +10,16 @@ export const SearchCheckOut = (): ReactElement => {
   const checkInDate = useSelector((state: RootState) => state.date.checkInDate);
 
   return (
-    <BasicDatePicker
-      minDate={checkInDate ? new Date(checkInDate) : new Date()} // Минимальная дата: checkInDate или сегодня
+    <DatePickerComponent
+      label='Check Out'
       value={selectedDate ? new Date(selectedDate) : null}
+      minDate={checkInDate ? new Date(checkInDate) : new Date()}
       onChange={(date): void => {
         if (date) {
-          dispatch(setCheckOutDate(date.toISOString())); // Отправляем дату выезда в Redux
+          dispatch(setCheckOutDate(date.toISOString()));
         }
-      }}
-      src={calendarIcon}
-      text='Check Out'
+      }
+      }
     />
   );
 };
