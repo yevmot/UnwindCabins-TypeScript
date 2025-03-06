@@ -1,11 +1,11 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { HeroBackground } from './components/HeroBackground';
 import { HeroContent } from './components/HeroContent';
-import SearchForm from './components/SearchForm';
+import { SearchForm } from './SearchForm';
 
 import './styles/heroComps.css';
 
-export default function HeroComps(): JSX.Element {
+export const HeroSection = (): ReactElement => {
   return (
     <section className="hero-container">
       <div className="big-container">
@@ -15,4 +15,4 @@ export default function HeroComps(): JSX.Element {
       </div>
     </section>
   );
-}
+};

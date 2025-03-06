@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import HeroComps from '../home/modules/hero/HeroComps';
+import { HeroSection } from './modules/hero/HeroSection';
 // import Discover from '../../components/sections/discover/Discover';
 // import Inspiration from '../../components/sections/inspiration/Inspiration';
 // import Experience from '../../components/sections/experience/Experience';
@@ -11,7 +11,7 @@ import HeroComps from '../home/modules/hero/HeroComps';
 export const HomePage = (): ReactElement => {
   return (
     <>
-      <HeroComps/>
+      <HeroSection/>
       {/* <Discover />
       <Inspiration />
       <Experience />
