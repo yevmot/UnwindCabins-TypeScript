@@ -1,6 +1,7 @@
 import BgImg from './../../../img/pre-footer-bg.jpg';
 import Shadow from './../../../img/pre-footer-shadow.png';
-import Button from '../../buttons/BasicButton';
+// import { BasicButton } from '../../buttons/BasicButton';
+import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
 import './preFooter.css';
 import { JSX } from 'react';

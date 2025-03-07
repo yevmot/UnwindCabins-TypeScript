@@ -1,5 +1,6 @@
 import { JSX } from 'react';
-import Button from '../../buttons/BasicButton';
+// import { BasicButton } from '../../buttons/BasicButton';
+import Button from '@mui/material/Button';
 import './footerForm.css';
 
 const FooterForm = (): JSX.Element => {

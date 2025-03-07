@@ -1,5 +1,6 @@
 import arrow from './../../../img/icons/arrow-right-circle.svg';
-import Button from '../../buttons/BasicButton';
+// import { BasicButton } from '../../buttons/BasicButton';
+import Button from '@mui/material/Button';
 import { JSX } from 'react';
 import { motion } from 'framer-motion';
 import { createTextAnimation } from './../../../types/textAnimation';

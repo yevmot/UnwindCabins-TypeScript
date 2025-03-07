@@ -4,10 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import LayOut from './Layout';
 
 import { HomePage } from './pages/home/HomePage';
-import CabinsPage from './pages/CabinsPage';
-import InspiredPage from './pages/InspiredPage';
-import StayPage from './pages/StayPage';
-import AboutPage from './pages/AboutPage';
+import CabinsPage from './pages/cabins/CabinsPage';
+import InspiredPage from './pages/inspired/InspiredPage';
+import StayPage from './pages/stay/StayPage';
+import AboutPage from './pages/about/AboutPage';
 
 import './styles/reset.css';
 import './styles/main.css';

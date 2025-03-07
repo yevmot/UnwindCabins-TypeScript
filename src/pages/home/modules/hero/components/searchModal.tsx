@@ -1,10 +1,12 @@
-import { JSX } from 'react';
-import BasicModal from '../../../../../components/modal/BasicModal';
+import { ReactElement } from 'react';
+import { ModalComponent } from '../../../../../components/modal/ModalComponent';
 import { useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
 import { format } from 'date-fns/format';
+import Box from '@mui/material/Box';
+import { searchModalBoxStyle, searchModalBoxTitleStyle } from '../styles/searchModalBoxStyle';
 
-export default function SearchModal(): JSX.Element {
+export const SearchModal = (): ReactElement => {
   const location = useSelector((state: RootState) => state.location.location);
   const checkInDate = useSelector((state: RootState) => state.date.checkInDate);
   const checkOutDate = useSelector((state: RootState) => state.date.checkOutDate);
@@ -21,11 +23,19 @@ export default function SearchModal(): JSX.Element {
   ];
 
   return (
-    <BasicModal
-      title='This modal window displays information about your choices.
-      The data is derived from Redux and shows the current state of your selections.
-      Filtering functionality will be added in the future to make the data easier to work with.'
-      content={ content }
-    />
+    <ModalComponent>
+      <Box sx={searchModalBoxStyle}>
+        <Box sx={searchModalBoxTitleStyle}>
+          {'Data from Redux Toolkit storage'}
+        </Box>
+        <Box>
+          {
+            content.map((item) => (
+              <Box>{item}</Box>
+            ))
+          }
+        </Box>
+      </Box>
+    </ModalComponent>
   );
-}
+};

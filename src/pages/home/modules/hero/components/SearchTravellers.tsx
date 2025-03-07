@@ -1,14 +1,12 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import BasicSelect from '../../../../../components/select/BasicSelect';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
 import { setTravellers } from '../../../../../store/reducers/travellersSlice';
-// import travellersIcon from './../../../../../img/icons/travellers.svg';
+import { travellersIcon } from '../constants/images/travellersIcon';
 
-const travellersIcon = './img/icons/travellers.svg';
-
-export default function Example(): JSX.Element {
+export const Travellers = (): ReactElement => {
   const dispatch = useDispatch();
   const travellers = useSelector((state: RootState) => state.travellers.travellers);
 
@@ -26,4 +24,4 @@ export default function Example(): JSX.Element {
       iconSrc={travellersIcon}
     />
   );
-}
+};

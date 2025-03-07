@@ -1,45 +1,27 @@
-import Button from '@mui/material/Button';
-import { SxProps } from '@mui/system';
-import { JSX } from 'react';
+// import Button from '@mui/material/Button';
+// import { ReactElement } from 'react';
+// import { ButtonPropsInterface } from './types/ButtonPropsInterface';
+// import { basicButtonStyle } from './styles/basicButtonStyle';
 
-// Интерфейс для обычных пропсов кнопки
-interface ButtonProps {
-  onClick?: () => void;
-  variant?: 'contained' ;
-  children: React.ReactNode;
-  sx?: SxProps;
-  href?: string;
-  disabled?: boolean;
-  icon?: string;
-}
-
-export default function BasicButton({
-  disabled,
-  onClick,
-  variant,
-  children,
-  sx,
-  href,
-  icon,
-}: ButtonProps): JSX.Element {
-  return (
-    <Button
-      disabled={disabled}
-      onClick={onClick}
-      variant={variant}
-      href={href}
-      sx={{
-        'textTransform': 'none',
-        'fontFamily': 'Poppins',
-        'transition': 'all 0.3s ease-in-out',
-        '&:hover': {
-          transform: 'scale(1.02)',
-        },
-        ...sx,
-      }}
-    >
-      {children}
-      {icon}
-    </Button>
-  );
-}
+// export const BasicButton = ({
+//   disabled,
+//   onClick,
+//   variant,
+//   children,
+//   sx,
+//   href,
+//   icon,
+// }: ButtonPropsInterface): ReactElement => {
+//   return (
+//     <Button
+//       disabled={disabled}
+//       onClick={onClick}
+//       variant={variant}
+//       href={href}
+//       sx={{ basicButtonStyle, ...sx }}
+//     >
+//       {children}
+//       {icon}
+//     </Button>
+//   );
+// };

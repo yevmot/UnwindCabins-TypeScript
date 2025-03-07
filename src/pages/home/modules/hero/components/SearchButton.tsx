@@ -1,10 +1,11 @@
-import BasicButton from '../../../../../components/buttons/BasicButton';
-import { JSX } from 'react';
+import Button from '@mui/material/Button';
+import { ReactElement } from 'react';
 import { RootState } from '@app/store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../../../../../store/reducers/modalSlice';
+import { searchButtonStyle } from '../styles/searchButtonStyle';
 
-export default function SearchBtn(): JSX.Element {
+export const SearchButton = (): ReactElement => {
   const dispatch = useDispatch();
 
   const location = useSelector((state: RootState) => state.location.location);
@@ -15,23 +16,15 @@ export default function SearchBtn(): JSX.Element {
   const isButtonDisabled = !(location && checkInDate && checkOutDate && travellers);
 
   return (
-    <BasicButton
+    <Button
       onClick={(): void => {
         dispatch(openModal());
       }}
       variant='contained'
       disabled = {isButtonDisabled}
-      sx={{
-        width: '236px',
-        height: '54px',
-        color: 'white',
-        backgroundColor: 'var(--dark-green)',
-        fontWeight: '400',
-        fontSize: '16px',
-        lineHeight: '28px',
-      }}
+      sx = { searchButtonStyle }
     >
       Find available cabins
-    </BasicButton>
+    </Button>
   );
-}
+};

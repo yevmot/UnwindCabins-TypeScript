@@ -1,7 +1,8 @@
 import { JSX } from 'react';
 import { motion } from 'framer-motion';
 import { createTextAnimation } from './../../../types/textAnimation';
-import BasicButton from '../../buttons/BasicButton';
+// import { BasicButton } from '../../buttons/BasicButton';
+import Button from '@mui/material/Button';
 import imgBg from './../../../img/find-img-bg.jpg';
 import './find.css';
 import { Link } from 'react-router-dom';
@@ -40,7 +41,7 @@ const Find = (): JSX.Element => {
             variants={textAnimation}
             custom={4}
             className="btn">
-            <BasicButton
+            <Button
               sx={{
                 backgroundColor: '#f5b963',
                 color: 'black',
@@ -51,7 +52,7 @@ const Find = (): JSX.Element => {
                 fontWeight: '400',
               }}
             >{'Find available cabins'}
-            </BasicButton>
+            </Button>
           </motion.div>
         </Link>
       </div>

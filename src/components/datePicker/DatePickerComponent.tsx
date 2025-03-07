@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
-import { de } from 'date-fns/locale/de';
+import { enGB } from 'date-fns/locale';
 import Box from '@mui/material/Box';
 import { datePickerPropsInterface } from './types/datePickerPropsInterface';
 import { datePickerStyle } from './styles/datePickerStyle';
@@ -16,9 +16,10 @@ export const DatePickerComponent = ({
   maxDate,
 }: datePickerPropsInterface): ReactElement => {
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={de}>
+    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enGB}>
 
       <DatePicker className='date-picker'
+        format='dd.MM.yyyy'
         value={value ?? null}
         minDate={minDate}
         maxDate={maxDate}
