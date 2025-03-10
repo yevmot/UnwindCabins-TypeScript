@@ -1,17 +1,12 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-
-interface IBasicSelectProps {
-  value?: string | '';
-  onChange: (event: SelectChangeEvent) => void;
-  label: string;
-  options: string[];
-  iconSrc?: string;
-}
+import Select from '@mui/material/Select';
+import { BasicSelectPropsInterface } from './types/BasicSelectProps';
+import { basicSelectBoxStyle } from './styles/basicSelectBoxStyle';
+import { inputLabelStyle } from './styles/inputLabelStyle';
 
 export default function BasicSelect({
   value,
@@ -19,25 +14,13 @@ export default function BasicSelect({
   label,
   options = [],
   iconSrc,
-}: IBasicSelectProps): JSX.Element {
+}: BasicSelectPropsInterface): ReactElement {
   return (
-    <Box sx={{
-      'minWidth': '140px',
-      'backgroundColor': '#EAEAEA',
-      'height': '54px',
-      'borderRadius': '4px',
-      'fieldset': { border: 'none' },
-    }}>
+    <Box sx={basicSelectBoxStyle}>
       <FormControl fullWidth>
         <InputLabel
           style={{ color: '#565656', border: 'none' }}
-          sx={{
-            'display': 'flex',
-            'justifyContent': 'center',
-            'alignItems': 'center',
-            'fontFamily': 'Poppins',
-            'fontSize': '16px',
-          }}>
+          sx={inputLabelStyle}>
           {iconSrc && (
             <img
               src={iconSrc}
