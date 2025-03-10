@@ -9,7 +9,7 @@ interface IBasicSelectProps {
   value?: string | '';
   onChange: (event: SelectChangeEvent) => void;
   label: string;
-  options: Array<string>;
+  options: string[];
   iconSrc?: string;
 }
 

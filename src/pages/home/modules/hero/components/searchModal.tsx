@@ -26,12 +26,12 @@ export const SearchModal = (): ReactElement => {
     <ModalComponent>
       <Box sx={searchModalBoxStyle}>
         <Box sx={searchModalBoxTitleStyle}>
-          {'Data from Redux Toolkit storage'}
+          Data from Redux Toolkit storage
         </Box>
         <Box>
           {
-            content.map((item) => (
-              <Box>{item}</Box>
+            content.map((item, index) => (
+              <Box key={index}>{item}</Box>
             ))
           }
         </Box>
