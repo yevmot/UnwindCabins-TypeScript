@@ -1,9 +1,9 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import DiscoverCards from './cards/DiscoverCards';
-import './discover.css';
+import { DiscoverCards } from './components/DiscoverCards';
+import './styles/discover.css';
 
-const Discover = (): JSX.Element => {
+export const Discover = (): ReactElement => {
   return (
     <section className="discover-wrapper">
       <div className="container">
@@ -27,5 +27,3 @@ const Discover = (): JSX.Element => {
     </section>
   );
 };
-
-export default Discover;

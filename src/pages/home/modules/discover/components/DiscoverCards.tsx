@@ -1,9 +1,9 @@
 import DiscoverCard from './DiscoverCard';
-import discoverCardList from '../../../../data/discoverCardList';
-import { JSX } from 'react';
-import './cards.css';
+import { discoverCardList } from '../mock-data/discoverCardList';
+import { ReactElement } from 'react';
+import '../styles/cards.css';
 
-const Cards = (): JSX.Element => {
+export const DiscoverCards = (): ReactElement => {
   return (
     <div className="container card-container">
       {discoverCardList.map((card, index) => (
@@ -21,4 +21,3 @@ const Cards = (): JSX.Element => {
   );
 };
 
-export default Cards;

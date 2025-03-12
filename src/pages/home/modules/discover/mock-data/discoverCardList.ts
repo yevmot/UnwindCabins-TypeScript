@@ -1,9 +1,9 @@
-import { IIDiscoverCards } from '@app/types/cards';
-import Card01 from './../img/cards/Discover-card01.jpg';
-import Card02 from './../img/cards/Discover-card02.jpg';
-import Card03 from './../img/cards/Discover-card03.jpg';
+import { discoverCardsInterface } from '../types/discoverCardsInterface';
+const Card01 = '/img/cards/Discover-card01.jpg';
+const Card02 = '/img/cards/Discover-card02.jpg';
+const Card03 = '/img/cards/Discover-card03.jpg';
 
-const discoverCardList: IIDiscoverCards[] = [
+export const discoverCardList: discoverCardsInterface[] = [
   {
     img: Card01,
     location: 'Hampshire · England',
@@ -29,5 +29,3 @@ const discoverCardList: IIDiscoverCards[] = [
     review: 79,
   },
 ];
-
-export default discoverCardList;

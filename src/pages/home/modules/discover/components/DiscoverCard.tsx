@@ -1,9 +1,10 @@
 import { JSX } from 'react';
-import { IIDiscoverCards } from '@app/types/cards';
-import FullStar from './../../../../img/cards/full-star.svg';
-import CleanStar from './../../../../img/cards/clean-star.svg';
+import { discoverCardsInterface } from '../types/discoverCardsInterface';
 
-const Card = ({ img, location, title, price, text, review }:IIDiscoverCards): JSX.Element => {
+const FullStar = '/img/cards/full-star.svg';
+const CleanStar = '/img/cards/clean-star.svg';
+
+const Card = ({ img, location, title, price, text, review }:discoverCardsInterface): JSX.Element => {
   return (
     <div className="card">
       <img src={img} alt="card-img" className="card-img" />
