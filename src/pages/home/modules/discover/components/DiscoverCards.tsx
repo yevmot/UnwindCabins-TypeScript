@@ -1,4 +1,4 @@
-import DiscoverCard from './DiscoverCard';
+import { DiscoverCard } from './DiscoverCard';
 import { discoverCardList } from '../mock-data/discoverCardList';
 import { ReactElement } from 'react';
 import '../styles/cards.css';

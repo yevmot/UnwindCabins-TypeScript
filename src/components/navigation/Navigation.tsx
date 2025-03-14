@@ -2,7 +2,7 @@ import { JSX, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { Logo } from '../logo/Logo';
-import LoginButton from '../buttons/LoginButton';
+import { LoginButton } from '../buttons/LoginButton';
 import './navigation.css';
 import './headerNavMedia.css';
 

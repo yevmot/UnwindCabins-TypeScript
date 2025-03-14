@@ -4,7 +4,7 @@ import { discoverCardsInterface } from '../types/discoverCardsInterface';
 const FullStar = '/img/cards/full-star.svg';
 const CleanStar = '/img/cards/clean-star.svg';
 
-const Card = ({ img, location, title, price, text, review }:discoverCardsInterface): JSX.Element => {
+export const DiscoverCard = ({ img, location, title, price, text, review }:discoverCardsInterface): JSX.Element => {
   return (
     <div className="card">
       <img src={img} alt="card-img" className="card-img" />
@@ -34,5 +34,3 @@ const Card = ({ img, location, title, price, text, review }:discoverCardsInterfa
     </div>
   );
 };
-
-export default Card;
