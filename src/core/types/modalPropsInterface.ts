@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface modalProps {
+export interface modalPropsInterface {
     children: ReactNode;
   }

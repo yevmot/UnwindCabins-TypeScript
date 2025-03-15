@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { ModalComponent } from '../../../../../components/modal/ModalComponent';
+import { ModalComponent } from '../../../../../core/components/modal/ModalComponent';
 import { useSelector } from 'react-redux';
 import { RootState } from '@app/store/store';
 import { format } from 'date-fns/format';

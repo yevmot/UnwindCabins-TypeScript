@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../../../../../store/store';
 import { setCheckInDate } from '../../../../../store/reducers/dateSlice';
 
-import { DatePickerComponent } from '../../../../../components/datePicker/DatePickerComponent';
+import { DatePickerComponent } from '../../../../../core/components/datePicker/DatePickerComponent';
 
 const calendarIcon = '/public/img/icons/calendar.svg';
 

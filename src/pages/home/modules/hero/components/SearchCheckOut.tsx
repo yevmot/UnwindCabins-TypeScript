@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { DatePickerComponent } from '../../../../../components/datePicker/DatePickerComponent';
+import { DatePickerComponent } from '../../../../../core/components/datePicker/DatePickerComponent';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@app/store/store';
 import { setCheckOutDate } from '../../../../../store/reducers/dateSlice';

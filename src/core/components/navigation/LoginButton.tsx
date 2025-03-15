@@ -5,7 +5,7 @@ import { ReactElement, useState } from 'react';
 import { Avatar, Box, Divider, ListItemIcon, Menu, MenuItem, Tooltip } from '@mui/material';
 import { Logout, PersonAdd, Settings } from '@mui/icons-material';
 
-export function LoginButton(): ReactElement {
+export const LoginButton = (): ReactElement => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -95,4 +95,4 @@ export function LoginButton(): ReactElement {
       </Menu>
     </React.Fragment>
   );
-}
+};

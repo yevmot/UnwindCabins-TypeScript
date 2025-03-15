@@ -2,8 +2,8 @@ import { ReactElement } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@app/store/store';
-import { closeModal } from '../../store/reducers/modalSlice';
-import { modalProps } from './types/modalProps';
+import { closeModal } from '../../../store/reducers/modalSlice';
+import { modalPropsInterface } from '../../types/modalPropsInterface';
 
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -13,7 +13,7 @@ import { Fade } from '@mui/material';
 import { modalBoxStyle } from './styles/modalBoxStyle';
 import { iconButtonStyle } from './styles/IconButtonStyle';
 
-export const ModalComponent = ({ children }: modalProps): ReactElement => {
+export const ModalComponent = ({ children }: modalPropsInterface): ReactElement => {
   const dispatch = useDispatch<AppDispatch>();
   const modalState = useSelector((state: RootState) => state.modal.isOpen);
 

@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react';
-import { autoCompleteInterface } from './types/autoCompleteInterface';
+import { autoCompleteInterface } from '../../types/autoCompleteInterface';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';

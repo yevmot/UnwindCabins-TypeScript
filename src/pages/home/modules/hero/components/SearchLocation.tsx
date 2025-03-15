@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { AutoComplete } from '../../../../../components/autoComplete/AutoComplete';
+import { AutoComplete } from '../../../../../core/components/autoComplete/AutoComplete';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../../store/store';

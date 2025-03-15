@@ -3,7 +3,7 @@ import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { enGB } from 'date-fns/locale';
 import Box from '@mui/material/Box';
-import { datePickerPropsInterface } from './types/datePickerPropsInterface';
+import { datePickerPropsInterface } from '../../types/datePickerPropsInterface';
 import { datePickerStyle } from './styles/datePickerStyle';
 import { boxStyleCalendarLabel } from './styles/boxStyleCalendarLabel';
 import { calendarIconSrc } from './constants/calendarIconSrc';

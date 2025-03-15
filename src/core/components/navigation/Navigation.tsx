@@ -1,24 +1,12 @@
-import { JSX, useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
 import { Logo } from '../logo/Logo';
-import { LoginButton } from '../buttons/LoginButton';
-import './navigation.css';
-import './headerNavMedia.css';
+import { LoginButton } from './LoginButton';
+import { navLinksData } from './data/navLinksData';
+import './styles/navigation.css';
+import './styles/headerNavMedia.css';
 
-interface NavLink {
-  text: string;
-  to: string;
-}
-
-const navLinks: NavLink[] = [
-  { to: '/cabins', text: 'Our cabins' },
-  { to: '/inspired', text: 'Get inspired' },
-  { to: '/stay', text: 'Gift a stay' },
-  { to: '/about', text: 'About us' },
-];
-
-export default function Navigation(): JSX.Element {
+export const Navigation = (): ReactElement => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenu = (): void => {
@@ -37,7 +25,7 @@ export default function Navigation(): JSX.Element {
       </div>
 
       <ul className={`menu ${isOpen ? 'menu-open' : 'menu-closed'}`}>
-        {navLinks.map(({ to, text }) => (
+        {navLinksData.map(({ to, text }) => (
           <li key={text} className='menu-item'>
             <NavLink to={to} className='menu-link'>
               <span className='no-select'>{text}</span>
@@ -53,4 +41,4 @@ export default function Navigation(): JSX.Element {
       {isOpen && <div className="overlay" onClick={handleMenu}></div>}
     </nav>
   );
-}
+};
