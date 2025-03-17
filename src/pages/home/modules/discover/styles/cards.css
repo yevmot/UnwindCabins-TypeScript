@@ -10,8 +10,14 @@
     flex-direction: column;
     width: 339px;
     height: 489px;
+    margin-bottom: 25px;
     background-color: #2b3030;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.01);
 }
 .card .card-img {
     border-radius: 4px;

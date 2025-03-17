@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import LayOut from './Layout';
 
 import { HomePage } from './pages/home/HomePage';
-import CabinsPage from './pages/cabins/CabinsPage';
+import { CabinsPage } from './pages/cabins/CabinsPage';
 import InspiredPage from './pages/inspired/InspiredPage';
 import StayPage from './pages/stay/StayPage';
 import AboutPage from './pages/about/AboutPage';
@@ -12,6 +12,7 @@ import AboutPage from './pages/about/AboutPage';
 import './styles/reset.css';
 import './styles/main.css';
 import ScrollToAnchor from './helpers/ScrollToAnchor';
+import { CabinDetailsPage } from './pages/сabin-details/CabinDetailsPage';
 
 const App = (): JSX.Element => {
   return (
@@ -22,6 +23,7 @@ const App = (): JSX.Element => {
         <Route path='/' element={<LayOut/>}>
           <Route index element={<HomePage />}/>
           <Route path='cabins' element={<CabinsPage />}/>
+          <Route path='cabins/:id' element={<CabinDetailsPage />} />
           <Route path='inspired' element={<InspiredPage />}/>
           <Route path='stay' element={<StayPage />}/>
           <Route path='about' element={<AboutPage />}/>

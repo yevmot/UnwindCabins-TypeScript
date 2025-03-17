@@ -6,8 +6,10 @@ import '../styles/cards.css';
 export const DiscoverCards = (): ReactElement => {
   return (
     <div className="container card-container">
-      {discoverCardList.map((card, index) => (
+      {discoverCardList.slice(0, 3).map((card, index) => (
         <DiscoverCard
+          rating={card.rating}
+          id={card.id}
           key={index}
           img={card.img}
           location={card.location}

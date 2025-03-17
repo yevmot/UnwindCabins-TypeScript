@@ -1,36 +1,43 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { discoverCardsInterface } from '../types/discoverCardsInterface';
+import { renderStars } from './RenderStars';
+import { Link } from 'react-router-dom';
 
-const FullStar = '/img/cards/full-star.svg';
-const CleanStar = '/img/cards/clean-star.svg';
-
-export const DiscoverCard = ({ img, location, title, price, text, review }:discoverCardsInterface): JSX.Element => {
+export const DiscoverCard = (
+  {
+    id,
+    img,
+    location,
+    title,
+    price,
+    text,
+    review,
+    rating,
+  }:discoverCardsInterface): ReactElement => {
   return (
-    <div className="card">
-      <img src={img} alt="card-img" className="card-img" />
-      <div className="card-desc">
-        <span className="loc">{location}</span>
-        <div className="card-title">
-          <span>{title}</span>
-          <span className="price">
-            {price}
-            <span className="superscript">pp</span>
-          </span>
-        </div>
-        <p>{text}</p>
-        <div className="card-review">
-          <div className="stars">
-            <img src={FullStar} alt="star-img" />
-            <img src={FullStar} alt="star-img" />
-            <img src={FullStar} alt="star-img" />
-            <img src={FullStar} alt="star-img" />
-            <img src={CleanStar} alt="clean-star-img" />
+    <div className="card" id={String(id)}>
+      <Link to={`/cabins/${id}`} className="card-link">
+        <img src={img} alt="card-img" className="card-img" />
+        <div className="card-desc">
+          <span className="loc">{location}</span>
+          <div className="card-title">
+            <span>{title}</span>
+            <span className="price">
+              {price}
+              <span className="superscript">pp</span>
+            </span>
           </div>
-          <span>
-            <span id="reviewCount">{review}</span> reviews
-          </span>
+          <p>{text}</p>
+          <div className="card-review">
+            <div className="stars">
+              {renderStars(rating)}
+            </div>
+            <span>
+              <span id="reviewCount">{review}</span> reviews
+            </span>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
