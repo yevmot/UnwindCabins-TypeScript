@@ -1,7 +1,7 @@
 import { IInspirationCards } from '@app/types/cards';
-import Card01 from './../img/cards/Inspiration-card01.jpg';
-import Card02 from './../img/cards/Inspiration-card02.jpg';
-import Card03 from './../img/cards/Inspiration-card03.jpg';
+const Card01 = '/img/cards/Inspiration-card01.jpg';
+const Card02 = '/img/cards/Inspiration-card02.jpg';
+const Card03 = '/img/cards/Inspiration-card03.jpg';
 
 const inspirationCardList: IInspirationCards[] = [
   {

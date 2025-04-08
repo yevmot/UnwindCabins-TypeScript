@@ -1,4 +1,4 @@
-import { IAboutQuestions } from './../types/aboutQuestions';
+import { IAboutQuestions } from '../types/aboutQuestions';
 
 export const aboutQuestions: IAboutQuestions[] = [
   {

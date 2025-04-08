@@ -1,13 +1,13 @@
 import { JSX } from 'react';
 import { motion } from 'framer-motion';
-import { createTextAnimation } from './../../../types/textAnimation';
+import { createTextAnimation } from '../../../../types/textAnimation';
 // import { BasicButton } from '../../buttons/BasicButton';
 import Button from '@mui/material/Button';
-import imgBg from './../../../img/find-img-bg.jpg';
-import './find.css';
+const imgBg = '/img/find-img-bg.jpg';
+import './styles/find.css';
 import { Link } from 'react-router-dom';
 
-const Find = (): JSX.Element => {
+export const Find = (): JSX.Element => {
   const textAnimation = createTextAnimation({ y: 100 });
 
   return (
@@ -40,7 +40,7 @@ const Find = (): JSX.Element => {
           <motion.div
             variants={textAnimation}
             custom={4}
-            className="btn">
+            className="find-button">
             <Button
               sx={{
                 backgroundColor: '#f5b963',
@@ -50,6 +50,9 @@ const Find = (): JSX.Element => {
                 borderRadius: '4px',
                 fontSize: '16px',
                 fontWeight: '400',
+                textDecoration: 'none',
+                fontFamily: 'Poppins',
+                textTransform: 'none',
               }}
             >{'Find available cabins'}
             </Button>
@@ -59,5 +62,3 @@ const Find = (): JSX.Element => {
     </motion.section>
   );
 };
-
-export default Find;

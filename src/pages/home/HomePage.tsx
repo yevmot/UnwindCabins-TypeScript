@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
 import { HeroSection } from './modules/hero/HeroSection';
 import { Discover } from '../home/modules/discover/Discover';
-// import Inspiration from '../../components/sections/inspiration/Inspiration';
-// import Experience from '../../components/sections/experience/Experience';
-// import VideoSection from '../../components/sections/video-section/videoSection';
-// import Find from '../../components/sections/find/Find';
-// import About from '../../components/sections/about/About';
+import { Inspiration } from '../home/modules/inspiration/Inspiration';
+import { Experience } from './modules/experience/Experience';
+import { VideoSection } from './modules/video-section/videoSection';
+import { Find } from './modules/find/Find';
+import { About } from './modules/about/About';
 // import PreFooter from '../../components/sections/pre-footer/PreFooter';
 
 export const HomePage = (): ReactElement => {
@@ -13,11 +13,11 @@ export const HomePage = (): ReactElement => {
     <>
       <HeroSection/>
       <Discover />
-      {/* <Inspiration /> */}
-      {/* <Experience /> */}
-      {/* <VideoSection /> */}
-      {/* <Find /> */}
-      {/* <About /> */}
+      <Inspiration />
+      <Experience />
+      <VideoSection />
+      <Find />
+      <About />
       {/* <PreFooter /> */}
     </>
   );

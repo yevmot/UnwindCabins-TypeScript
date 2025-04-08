@@ -1,9 +1,9 @@
-import { JSX } from 'react';
-import InspirationCards from './cards/InspirationCards';
-import './inspiration.css';
+import { ReactElement } from 'react';
+import InspirationCards from './components/InspirationCards';
+import './styles/inspiration.css';
 import { Link } from 'react-router-dom';
 
-const Inspiration = (): JSX.Element => {
+export const Inspiration = (): ReactElement => {
   return (
     <section className="inspiration-wrapper">
       <div className="container">
@@ -27,5 +27,3 @@ const Inspiration = (): JSX.Element => {
     </section>
   );
 };
-
-export default Inspiration;

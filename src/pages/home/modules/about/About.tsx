@@ -1,18 +1,20 @@
-import arrow from './../../../img/icons/arrow-right-circle.svg';
 // import { BasicButton } from '../../buttons/BasicButton';
 import Button from '@mui/material/Button';
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { motion } from 'framer-motion';
-import { createTextAnimation } from './../../../types/textAnimation';
-import './about.css';
+import { createTextAnimation } from '../../../../types/textAnimation';
 
-import { aboutQuestions } from './../../../data/aboutQuestions';
+import { aboutQuestions } from './mock-data/aboutQuestions';
 import { Link } from 'react-router-dom';
 
-const About = (): JSX.Element => {
+import './styles/about.css';
+
+const arrow = '/img/icons/arrow-right-circle.svg';
+
+export const About = (): ReactElement => {
   const textAnimation = createTextAnimation({ x: -100 });
 
-  const Arrow = (): JSX.Element => {
+  const Arrow = (): ReactElement => {
     return <>
       <img src={arrow} alt='arrow'/>
     </>;
@@ -52,7 +54,12 @@ const About = (): JSX.Element => {
                 custom={4}
                 className="btn">
                 <Button
-                  sx={{ fontWeight: '500', fontSize: '14px' }}
+                  sx={{
+                    fontFamily: 'Poppins',
+                    fontWeight: '500',
+                    fontSize: '14px',
+                    textTransform: 'none',
+                  }}
                 >
                   {question.title}
                   <Arrow />
@@ -74,5 +81,3 @@ const About = (): JSX.Element => {
     </motion.section>
   );
 };
-
-export default About;

@@ -1,16 +1,17 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { motion } from 'framer-motion';
-import { createTextAnimation } from './../../../types/textAnimation';
+import { createTextAnimation } from '../../../../types/textAnimation';
 import ReactPlayer from 'react-player/youtube';
-import Play from './../../../img/icons/play.svg';
-import Details from './../../../img/bg-detail.svg';
+
+import { Play } from './constants/icons';
+import { Details } from './constants/icons';
+import { videoSrc } from './constants/videoSrc';
+
 import './videoSection.css';
 
 const textAnimation = createTextAnimation({ x: -100 });
 
-const VideoSrc = 'https://youtu.be/bjlUhtXSi5w?si=tC7Zs9ONwNWb5lho';
-
-const VideoSection = (): JSX.Element => {
+export const VideoSection = (): ReactElement => {
   return (
     <section className="section-wrapper">
       <div className="big-container">
@@ -60,7 +61,7 @@ const VideoSection = (): JSX.Element => {
             <div className="video">
               <ReactPlayer
                 light
-                url={VideoSrc}
+                url={videoSrc}
                 playIcon={<img src={Play} alt="Play" />}
                 height="375px"
                 width="615px"
@@ -76,5 +77,3 @@ const VideoSection = (): JSX.Element => {
     </section>
   );
 };
-
-export default VideoSection;

@@ -1,5 +1,5 @@
 import InspirationCard from './InspirationCard';
-import InspirationCardList from './../../../../data/InspirationCardList';
+import InspirationCardList from '../mock-data/InspirationCardList';
 import { JSX } from 'react';
 
 const InspirationCards = (): JSX.Element => {

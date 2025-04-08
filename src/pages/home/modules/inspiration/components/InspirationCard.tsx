@@ -1,5 +1,6 @@
 import { JSX } from 'react';
-import { IInspirationCards } from '../../../../types/cards';
+import { IInspirationCards } from '../../../../../types/cards';
+import '../styles/inspirationCards.css';
 
 const InspirationCard = ({ img, slogan, title, text }: IInspirationCards): JSX.Element => {
   return (

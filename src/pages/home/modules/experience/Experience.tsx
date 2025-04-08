@@ -1,14 +1,15 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 import { motion } from 'framer-motion';
-import { createTextAnimation } from './../../../types/textAnimation';
-import star from './../../../img/icons/star.svg';
-import bgImg from './../../../img/exp-igm.jpg';
-import './experience.css';
+import { createTextAnimation } from '../../../../types/textAnimation';
+import './styles/experience.css';
 
-const Experience = (): JSX.Element => {
-  const starCount = [1, 2, 3, 4, 5];
-  const textAnimation = createTextAnimation({ x: 100 });
+import { star } from './constants/experienceImages';
+import { bgImg } from './constants/experienceImages';
 
+const starCount = [1, 2, 3, 4, 5];
+const textAnimation = createTextAnimation({ x: 100 });
+
+export const Experience = (): ReactElement => {
   return (
     <section className="experience">
       <div className="big-container">
@@ -54,5 +55,3 @@ const Experience = (): JSX.Element => {
     </section>
   );
 };
-
-export default Experience;

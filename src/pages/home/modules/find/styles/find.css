@@ -43,3 +43,10 @@
 .find-content p {
     margin: 10px 0 24px 0;
 }
+.find-button button{
+    transition: all 0.3s ease;
+}
+.find-button button:hover {
+    transform: scale(1.02);
+}
+
