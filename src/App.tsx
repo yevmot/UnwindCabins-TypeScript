@@ -17,7 +17,6 @@ import { CabinDetailsPage } from './pages/сabin-details/CabinDetailsPage';
 const App = (): JSX.Element => {
   return (
     <div className="App">
-
       <ScrollToAnchor/>
       <Routes>
         <Route path='/' element={<LayOut/>}>

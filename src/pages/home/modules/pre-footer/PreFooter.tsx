@@ -1,15 +1,13 @@
-import BgImg from './../../../img/pre-footer-bg.jpg';
-import Shadow from './../../../img/pre-footer-shadow.png';
-// import { BasicButton } from '../../buttons/BasicButton';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
-import './preFooter.css';
+import './styles/preFooter.css';
 import { JSX } from 'react';
-import { createTextAnimation } from './../../../types/textAnimation';
+import { createTextAnimation } from '../../../../types/textAnimation';
+import { BgImg, Shadow } from './constants/images';
 
 const textAnimation = createTextAnimation({ y: -100 });
 
-const PreFooter = (): JSX.Element => {
+export const PreFooter = (): JSX.Element => {
   return (
     <section className='pre-footer-wrapper'>
       <div className="big-container">
@@ -39,10 +37,12 @@ const PreFooter = (): JSX.Element => {
                 sx={{
                   bgcolor: '#D4EEEC',
                   color: '#173333',
-                  width: '205px',
-                  height: '40px',
+                  width: '220px',
+                  height: '45px',
                   fontSize: '14px',
                   fontWeight: '400',
+                  fontFamily: 'Poppins',
+                  textTransform: 'none',
                 }}
               >
             Find the perfect getaway
@@ -55,5 +55,3 @@ const PreFooter = (): JSX.Element => {
     </section>
   );
 };
-
-export default PreFooter;

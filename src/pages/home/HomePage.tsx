@@ -6,7 +6,7 @@ import { Experience } from './modules/experience/Experience';
 import { VideoSection } from './modules/video-section/videoSection';
 import { Find } from './modules/find/Find';
 import { About } from './modules/about/About';
-// import PreFooter from '../../components/sections/pre-footer/PreFooter';
+import { PreFooter } from './modules/pre-footer/PreFooter';
 
 export const HomePage = (): ReactElement => {
   return (
@@ -18,7 +18,7 @@ export const HomePage = (): ReactElement => {
       <VideoSection />
       <Find />
       <About />
-      {/* <PreFooter /> */}
+      <PreFooter />
     </>
   );
 };
